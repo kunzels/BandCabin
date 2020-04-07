@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form className ="formContainer" onSubmit={this.handleSubmit}>
                     Welcome to Bandcabin!
                         
                     {this.renderErrors()}
