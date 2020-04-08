@@ -5,15 +5,12 @@ import LogInFormContainer from "./session_form/login_form_container";
 import SignUpFormContainer from "./session_form/signup_form_container";
 import {AuthRoute} from "../util/route_util"
 import { Link } from 'react-router-dom'
-const app = () => (
+const App = () => (
     <div>
-        <div>
-        <img src={window.logo} alt="icon"/>
-        </div>
         <GreetingContainer />
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
     </div>
 );
 
-export default app;
+export default App;
