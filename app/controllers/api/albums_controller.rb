@@ -2,7 +2,7 @@ class Api::AlbumsController < ApplicationController
     before_action :require_logged_in, only: [:create]
 
     def index 
-        Album.all 
+        @albums = Album.all 
         render :index
     end
 
