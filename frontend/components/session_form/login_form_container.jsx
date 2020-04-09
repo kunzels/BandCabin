@@ -8,13 +8,14 @@ import SessionForm from './session_form';
 const msp = ({ errors }) => {
     return {
         errors: errors.session,
-        formType: 'login',
+        formType: 'Log In',
         navLink: <Link to="/signup">Click here to sign up!</Link>,
     };
 };
 const mdp = dispatch => {
     return {
         processForm: (user) => dispatch(login(user)),
+        login
     };
 };
 

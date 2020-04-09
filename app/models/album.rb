@@ -1,3 +1,4 @@
 class Album < ApplicationRecord
-validates :title, presence: true
+validates :title, :user_id, presence: true
+belongs_to :user
 end
