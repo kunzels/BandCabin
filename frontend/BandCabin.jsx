@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import {signup, login, logout} from "./actions/session_actions";
+// import {fetchAlbum, fetchAlbums, createAlbum} from "./util/album_api_util";
+import { fetchAlbum, fetchAlbums, createAlbum} from "./actions/album_actions"
 import configureStore from "./store/store";
 import Root from "./components/root";
 
@@ -19,6 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
     } else{
         store = configureStore();
     }
+    
+    //// testing
+    window.getState = store.getState;
+    // window.fetchAlbum = fetchAlbum;
+    // window.fetchAlbums = fetchAlbums;
+    // window.createAlbum = createAlbum;
+    window.dispatch = store.dispatch;
+    window.fetchAlbums = fetchAlbums;
+    window.fetchAlbum = fetchAlbum;
+    window.createAlbum = createAlbum;
+    ///// testing
 
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} />, root);
