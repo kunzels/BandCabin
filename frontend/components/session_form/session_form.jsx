@@ -28,7 +28,7 @@ class SessionForm extends React.Component {
 
     handleDemoUser(e) {
         e.preventDefault;
-        this.props.processForm(demo_user)
+        this.props.processForm(demo_user);
     }
 
     renderErrors() {
