@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { fetchUser } from "./actions/user_actions"
+import { fetchUser, fetchUsers } from "./actions/user_actions"
 import configureStore from "./store/store";
 import Root from "./components/root";
 
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.createAlbum = createAlbum;
     window.dispatch = store.dispatch;
     window.fetchUser = fetchUser;
+    window.fetchUsers = fetchUsers;
     ///// testing
 
     const root = document.getElementById("root");
