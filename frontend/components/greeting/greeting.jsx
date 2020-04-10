@@ -20,11 +20,11 @@ const Greeting = ({currentUser, logout}) => {
             <Link to="/" >
                 <img className="logo-link" src={window.logo} alt="" />
             </Link>
-            <p>Discover amazing new music and directly support the artists who make it.</p>
+            <div className="motto">Discover amazing new music and directly support the artists who make it.</div>
            </div>
 
             <div className="right-side-nav">
-                <Link to="/signup" className="login-links-left">sign up   </Link>
+                <Link to="/signup" className="login-links-right">sign up   </Link>
                 <Link to="/login" className="login-links-right">log in</Link>
             </div>
         </div>
