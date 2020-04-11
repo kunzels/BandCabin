@@ -13,16 +13,21 @@ class UserShow extends React.Component {
 
 
     render(){
-        
+        // debugger
         return(
             <div>
-            <div>{this.state.user.username}</div>
-            <div>{this.state.user.albums}</div>
-            <div>{this.props.currentUser}</div>
-            <div>hey</div>
+                <div className="user-bio">
+                    <div className="profile-picture-container">
+                        <img className ="profile-picture" src={this.state.user.photoURL} alt="profile-picture" />
+                    </div>
+                    <div className="profile-picture">{this.state.user.username}</div>
+                    <div className="user-bio-username">{this.props.currentUser}</div>
+                    <div>hey</div>
+                </div>
             </div>
         )
     }
 }
 
 export default UserShow;
+{/* <div>{this.state.user.albums[0].title}</div> */}
