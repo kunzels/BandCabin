@@ -23587,3 +23587,1537 @@ Processing by Api::UsersController#show as JSON
 Completed 200 OK in 27ms (Views: 19.8ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/" for ::1 at 2020-04-11 15:18:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (5.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:18:02 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (8.7ms)
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (13.7ms)
+Completed 200 OK in 29ms (Views: 21.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:18:02 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:18:02 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.8ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (6.8ms)
+Completed 200 OK in 19ms (Views: 13.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:20:29 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.0ms)
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.2ms)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:24:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 312ms (Views: 309.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:24:49 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:24:58 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (5.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:24:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:25:00 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:25:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 307ms (Views: 303.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:25:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 90ms (Views: 86.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:25:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 303ms (Views: 300.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:25:39 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:26:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:26:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (5.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:26:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:26:31 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:26:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 31ms (Views: 27.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:28:22 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:28:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:28:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:28:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:30:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:30:12 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:31:00 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:31:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:32:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:33:14 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 31ms (Views: 27.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:34:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:34:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:34:58 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.0ms)
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.0ms)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f00a7567290c26b6ef4d3d999c43cf03e8ebc65/jason.jpg" for ::1 at 2020-04-11 15:34:58 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f00a7567290c26b6ef4d3d999c43cf03e8ebc65", "filename"=>"jason"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/stevenk/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.0ms) [0m[34mGenerated URL for file at key: 5FtrKexQ13oodP6WsEFh9ckh (https://bandcabin-dev.s3.amazonaws.com/5FtrKexQ13oodP6WsEFh9ckh?response-content-disposition=inline%3B%20filename%3D%22jason.jpg%22%3B%20filename%2A%3DUTF-8%27%27jason.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWICPSJHLKGLPZTZL%2F20200411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200411T193458Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=598b609e95a46828246a0657843328c32180790afb9d2c53fb15b471f02a0d94)[0m
+Redirected to https://bandcabin-dev.s3.amazonaws.com/5FtrKexQ13oodP6WsEFh9ckh?response-content-disposition=inline%3B%20filename%3D%22jason.jpg%22%3B%20filename%2A%3DUTF-8%27%27jason.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWICPSJHLKGLPZTZL%2F20200411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200411T193458Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=598b609e95a46828246a0657843328c32180790afb9d2c53fb15b471f02a0d94
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:37:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 344ms (Views: 340.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:37:35 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.7ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (6.7ms)
+Completed 200 OK in 20ms (Views: 14.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:38:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 335ms (Views: 332.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:38:11 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.1ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.1ms)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:40:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:40:41 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (4.5ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (7.3ms)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f00a7567290c26b6ef4d3d999c43cf03e8ebc65/jason.jpg" for ::1 at 2020-04-11 15:40:41 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f00a7567290c26b6ef4d3d999c43cf03e8ebc65", "filename"=>"jason"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/stevenk/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.1ms) [0m[34mGenerated URL for file at key: 5FtrKexQ13oodP6WsEFh9ckh (https://bandcabin-dev.s3.amazonaws.com/5FtrKexQ13oodP6WsEFh9ckh?response-content-disposition=inline%3B%20filename%3D%22jason.jpg%22%3B%20filename%2A%3DUTF-8%27%27jason.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWICPSJHLKGLPZTZL%2F20200411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200411T194041Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=bd64ae6ff76019f5d40c695fa9a07558c82a962045b320acc61371d3e69de1f5)[0m
+Redirected to https://bandcabin-dev.s3.amazonaws.com/5FtrKexQ13oodP6WsEFh9ckh?response-content-disposition=inline%3B%20filename%3D%22jason.jpg%22%3B%20filename%2A%3DUTF-8%27%27jason.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWICPSJHLKGLPZTZL%2F20200411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200411T194041Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=bd64ae6ff76019f5d40c695fa9a07558c82a962045b320acc61371d3e69de1f5
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:40:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:40:42 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (4.0ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (7.1ms)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:40:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:40:45 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.3ms)
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (6.0ms)
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:40:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:40:54 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.3ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.6ms)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:40:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:40:54 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.4ms)
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (6.2ms)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:40:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:40:55 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.2ms)
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (6.4ms)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:40:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:40:55 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.7ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (6.1ms)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-04-11 15:40:58 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FuKgmQK4TlJNyEypyxIqMw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "I2ZiGM8klgPuTDiEKrtucg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Demoth"], ["id", 73], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "Demoman@this.com"], ["id", 73], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."artist" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["artist", "TheDemoBoys"], ["id", 73], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "I2ZiGM8klgPuTDiEKrtucg"], ["updated_at", "2020-04-11 19:40:58.090028"], ["id", 73]]
+  ↳ app/models/user.rb:42
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (2.4ms)
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (4.2ms)
+Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-04-11 15:41:00 -0400
+Started POST "/api/session" for ::1 at 2020-04-11 15:41:00 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Demoth", "artist"=>"TheDemoBoys", "email"=>"Demoman@this.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demoth"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:26
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qyfqtZsKiD_QoeAn0ouwUA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Demoth"], ["id", 73], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "Demoman@this.com"], ["id", 73], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."artist" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["artist", "TheDemoBoys"], ["id", 73], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "qyfqtZsKiD_QoeAn0ouwUA"], ["updated_at", "2020-04-11 19:41:01.054445"], ["id", 73]]
+  ↳ app/models/user.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "artist"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.0ms)
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.0ms)
+Completed 200 OK in 218ms (Views: 9.7ms | ActiveRecord: 3.2ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:26
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:41:02 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (4.7ms)
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (7.6ms)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:42:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:42:10 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (4.3ms)
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (7.0ms)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:42:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:42:10 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.8ms)
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (6.6ms)
+Completed 200 OK in 19ms (Views: 13.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:43:12 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 303ms (Views: 300.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:44:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 331ms (Views: 329.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:44:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:44:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-04-11 15:45:06 -0400
+Started POST "/api/session" for ::1 at 2020-04-11 15:45:06 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Demoth", "artist"=>"TheDemoBoys", "email"=>"Demoman@this.com", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demoth"], ["LIMIT", 1]]
+  Parameters: {"user"=>{"username"=>"", "artist"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  ↳ app/models/user.rb:26
+  [1m[36mUser Load (198.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:26
+Completed 401 Unauthorized in 200ms (Views: 0.1ms | ActiveRecord: 198.6ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Demoth"], ["id", 73], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "Demoman@this.com"], ["id", 73], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."artist" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["artist", "TheDemoBoys"], ["id", 73], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["updated_at", "2020-04-11 19:45:06.336280"], ["id", 73]]
+  ↳ app/models/user.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (2.9ms)
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (4.7ms)
+Completed 200 OK in 219ms (Views: 10.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:45:09 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.1ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.5ms)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:46:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:46:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:46:44 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:47:19 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.4ms)
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.5ms)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f00a7567290c26b6ef4d3d999c43cf03e8ebc65/jason.jpg" for ::1 at 2020-04-11 15:47:19 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f00a7567290c26b6ef4d3d999c43cf03e8ebc65", "filename"=>"jason"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/stevenk/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.1ms) [0m[34mGenerated URL for file at key: 5FtrKexQ13oodP6WsEFh9ckh (https://bandcabin-dev.s3.amazonaws.com/5FtrKexQ13oodP6WsEFh9ckh?response-content-disposition=inline%3B%20filename%3D%22jason.jpg%22%3B%20filename%2A%3DUTF-8%27%27jason.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWICPSJHLKGLPZTZL%2F20200411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200411T194719Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=421ec333b788862fc972de85df85e15298ddb906d277c1f0aca0453ce1108505)[0m
+Redirected to https://bandcabin-dev.s3.amazonaws.com/5FtrKexQ13oodP6WsEFh9ckh?response-content-disposition=inline%3B%20filename%3D%22jason.jpg%22%3B%20filename%2A%3DUTF-8%27%27jason.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWICPSJHLKGLPZTZL%2F20200411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200411T194719Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=421ec333b788862fc972de85df85e15298ddb906d277c1f0aca0453ce1108505
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:47:37 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:49:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:49:14 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:49:29 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.2ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.3ms)
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:51:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 212ms (Views: 209.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:51:56 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.9ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (6.9ms)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:51:57 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:51:57 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.9ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (6.6ms)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 15:52:10 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.4ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.7ms)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 15:59:47 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (6.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 35ms (Views: 30.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 16:00:33 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.1ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.4ms)
+Completed 200 OK in 17ms (Views: 12.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f00a7567290c26b6ef4d3d999c43cf03e8ebc65/jason.jpg" for ::1 at 2020-04-11 16:00:33 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f00a7567290c26b6ef4d3d999c43cf03e8ebc65", "filename"=>"jason"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/stevenk/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (0.9ms) [0m[34mGenerated URL for file at key: 5FtrKexQ13oodP6WsEFh9ckh (https://bandcabin-dev.s3.amazonaws.com/5FtrKexQ13oodP6WsEFh9ckh?response-content-disposition=inline%3B%20filename%3D%22jason.jpg%22%3B%20filename%2A%3DUTF-8%27%27jason.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWICPSJHLKGLPZTZL%2F20200411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200411T200033Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=16bd4e38e0f8374d06412870ba34e3b3174a3c27ab68759a7b752e65b4855353)[0m
+Redirected to https://bandcabin-dev.s3.amazonaws.com/5FtrKexQ13oodP6WsEFh9ckh?response-content-disposition=inline%3B%20filename%3D%22jason.jpg%22%3B%20filename%2A%3DUTF-8%27%27jason.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWICPSJHLKGLPZTZL%2F20200411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200411T200033Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=16bd4e38e0f8374d06412870ba34e3b3174a3c27ab68759a7b752e65b4855353
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 16:00:42 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.6ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.8ms)
+Completed 200 OK in 19ms (Views: 14.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 16:10:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (7.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 354ms (Views: 348.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 16:10:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 16:11:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (5.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 16:11:17 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (4.6ms)
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (7.3ms)
+Completed 200 OK in 23ms (Views: 16.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f00a7567290c26b6ef4d3d999c43cf03e8ebc65/jason.jpg" for ::1 at 2020-04-11 16:11:17 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f00a7567290c26b6ef4d3d999c43cf03e8ebc65", "filename"=>"jason"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/stevenk/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.2ms) [0m[34mGenerated URL for file at key: 5FtrKexQ13oodP6WsEFh9ckh (https://bandcabin-dev.s3.amazonaws.com/5FtrKexQ13oodP6WsEFh9ckh?response-content-disposition=inline%3B%20filename%3D%22jason.jpg%22%3B%20filename%2A%3DUTF-8%27%27jason.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWICPSJHLKGLPZTZL%2F20200411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200411T201117Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b923f41f1fd60934589b3e448beeaa433bd5c8c4a99af6c97c4d16e21b15896d)[0m
+Redirected to https://bandcabin-dev.s3.amazonaws.com/5FtrKexQ13oodP6WsEFh9ckh?response-content-disposition=inline%3B%20filename%3D%22jason.jpg%22%3B%20filename%2A%3DUTF-8%27%27jason.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWICPSJHLKGLPZTZL%2F20200411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200411T201117Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b923f41f1fd60934589b3e448beeaa433bd5c8c4a99af6c97c4d16e21b15896d
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 16:13:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 269ms (Views: 265.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 16:13:31 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (5.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 16:13:34 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (3.1ms)
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.1ms)
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 16:14:00 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (4.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 257ms (Views: 253.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 16:14:00 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (7.1ms)
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (10.8ms)
+Completed 200 OK in 29ms (Views: 19.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-11 16:17:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2or-fndiD1s-KJVnZIwag"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (3.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/users/73" for ::1 at 2020-04-11 16:17:43 -0400
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:18
+  Rendering api/users/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 73], ["record_type", "User"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/users/_user.json.jbuilder:2
+  Rendered api/users/_user.json.jbuilder (4.7ms)
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (8.3ms)
+Completed 200 OK in 21ms (Views: 15.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f00a7567290c26b6ef4d3d999c43cf03e8ebc65/jason.jpg" for ::1 at 2020-04-11 16:17:43 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f00a7567290c26b6ef4d3d999c43cf03e8ebc65", "filename"=>"jason"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/stevenk/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.2ms) [0m[34mGenerated URL for file at key: 5FtrKexQ13oodP6WsEFh9ckh (https://bandcabin-dev.s3.amazonaws.com/5FtrKexQ13oodP6WsEFh9ckh?response-content-disposition=inline%3B%20filename%3D%22jason.jpg%22%3B%20filename%2A%3DUTF-8%27%27jason.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWICPSJHLKGLPZTZL%2F20200411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200411T201743Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=806dcddf88538566912fdbdedbd9b6bb8da547fa17aa7e0f90b8381472318e1d)[0m
+Redirected to https://bandcabin-dev.s3.amazonaws.com/5FtrKexQ13oodP6WsEFh9ckh?response-content-disposition=inline%3B%20filename%3D%22jason.jpg%22%3B%20filename%2A%3DUTF-8%27%27jason.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWICPSJHLKGLPZTZL%2F20200411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200411T201743Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=806dcddf88538566912fdbdedbd9b6bb8da547fa17aa7e0f90b8381472318e1d
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+

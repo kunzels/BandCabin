@@ -1,0 +1,54 @@
+.nav-bar{
+   float: none;
+   display: inline-flex;
+   align-items: baseline;
+   justify-content: space-between;
+   padding-bottom: 10px;
+   margin-top: 5px;
+   width: 100%;
+ }
+
+ /* .logout-button{
+     display: flex;
+    align-items: flex-end;
+ } */
+
+ .motto{
+     padding-left: 50px;
+     padding-bottom: 10px;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+
+
+/* .left-side-nav{
+} */
+.left-side-nav > p{
+    padding-left: 12px;
+    margin-top: 0px;
+}
+
+/* .right-side-nav{
+
+} */
+
+
+ .login-links-left{
+    text-decoration: none;
+    color: black;
+    padding-right: 10px;
+       font-style: bold;
+ }
+
+.login-links-right{
+    text-decoration: none;
+    color: black;
+    font-style: bold;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .logo-link{
+    width:150px; /* you can use % */
+    height: auto;
+    padding-left: 40px;
+}
+
