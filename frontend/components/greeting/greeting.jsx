@@ -7,8 +7,8 @@ const Greeting = ({currentUser, logout}) => {
             <Link to="/" >
                 <img className ="logo-link" src={window.logo} alt="" />
             </Link>
-            <h1 className="welcome">{currentUser.username}</h1>
             <div className="logout-button">
+            <Link to={`/users/${currentUser.id}`}>My Collection</Link>
             <button onClick={logout}>Log Out</button>
             </div>
         </div>
