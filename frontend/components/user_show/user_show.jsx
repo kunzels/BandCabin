@@ -17,6 +17,7 @@ class UserShow extends React.Component {
         return(
             <div>
             <div>{this.state.user.username}</div>
+            <div>{this.state.user.albums}</div>
             <div>{this.props.currentUser}</div>
             <div>hey</div>
             </div>
