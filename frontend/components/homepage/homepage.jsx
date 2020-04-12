@@ -9,7 +9,7 @@ const HomePage = () => {
                    {/* <p className="BI-Description">Weatherbox Return, With a New Halfway Home Live Session</p> */}
                 </div>
                 <div className="small-items">
-                   <img className="gizzard" src={window.gizzard} />
+                    <a href="https://www.youtube.com/watch?v=4zUPTPlkqDg" className="gizzard"><img className="gizzard" src={window.gizzard} /></a>
                    <img className="gizzard" src={window.manman} />
                    <img className="gizzard" src={window.mf} />
                 </div>
