@@ -1,0 +1,15 @@
+    // <div class="dropdown">
+    //     <a href="" # class="account" >
+    //         <img src="images/avatar.png" class="profile-circle" />
+    //     </a>
+    //     <div class="submenu" style="display: none; ">
+    //         <ul class="root">
+    //             <li >
+    //                 <Link to={`/users/${currentUser.id}`}>My Collection</Link>
+    //             </li>
+    //             <li className="logout-button">
+    //                 <button onClick={logout}>Log Out</button>
+    //             </li>
+    //         </ul>
+    //     </div>
+    // </div>

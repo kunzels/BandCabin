@@ -7,5 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-User.create!({username: 'Demoth', artist: 'TheDemoBoys', email:'Demoman@this.com', password:'demoguy5000'})
-User.create!({username: 'Poofart', artist: 'Thefartypoo', email:'poofat@this.com', password:'pooman1000'})
+User.create!({username: 'Demoth', artist: 'TheDemoBoys', email:'Demoman@this.com', password:'demoguy5000', location:"Rome", description:"A Roman BandMan", genre:"Math Rock"})
+Album.create(title: "DemoAlbum", user_id: User.first.id)
+User.first.photo.attach(io: File.open("/Users/stevenk/Documents/bandcabin/jason.jpg"), filename: "jason.jpg")

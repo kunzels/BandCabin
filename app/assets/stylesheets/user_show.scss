@@ -1,0 +1,47 @@
+.profile-picture-container{
+    display: inline-block;
+    width: 210px;
+    margin: -30px 38px 0 0;
+    padding-top: 70px;
+    padding-left: 80px;
+    
+}
+
+.profile-picture{
+    width: 210px;
+    height: 210px;
+    border-color: black;
+    border: black;
+    object-fit: cover;
+}
+
+.user-bio-username{
+
+    font-size: 30px;
+    text-align: center;
+}
+.bio{
+    display: inline-flex;
+    align-items: top;
+    height: 100px;
+    position: relative;
+    bottom: 140px;
+}
+
+.below-username{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 92px;
+    margin-top: 5px;
+    
+}
+
+.user-bio-grey{
+    color:#828282;
+    font-size: small;
+    padding-bottom: 2px;
+}
+.user-bio-description{
+    padding-top: 5px;
+}

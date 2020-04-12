@@ -19,18 +19,18 @@ class SessionForm extends React.Component {
             [field]: e.currentTarget.value
         });
     }
-
+    
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
-
+    
     handleDemoUser(e) {
         e.preventDefault;
         this.props.processForm(demo_user);
     }
-
+    
     renderErrors() {
         return (
             <div>
@@ -42,7 +42,7 @@ class SessionForm extends React.Component {
             </div>
         );
     }
-
+    
     render() {
         return (
             <div className="form-container" >
@@ -59,14 +59,14 @@ class SessionForm extends React.Component {
                             <input id="username" type="text" value={this.state.username} onChange={this.update('username')}/>
                         </div>
                     <br/>
-                        <div className= "input">
-                            <label htmlFor="artist">Artist / Band Name:</label>
-                            <input id="artist" type="text" value={this.state.artist} onChange={this.update('artist')} />
-                        </div>
-                    <br/>
-                        <div className= "input">
+                        <div className="input">
                             <label className="email-input" htmlFor="email">Email:</label>
                             <input id="email" type="text" value={this.state.email} onChange={this.update('email')} />
+                        </div>
+                    <br/>
+                        <div className="input">
+                            <label htmlFor="artist">Artist / Band Name:</label>
+                            <input id="artist" type="text" value={this.state.artist} onChange={this.update('artist')} />
                         </div>
                     <br/>
                         <div className= "input">

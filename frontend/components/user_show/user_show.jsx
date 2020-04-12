@@ -9,20 +9,30 @@ class UserShow extends React.Component {
     componentDidMount () {
         this.props.fetchUser(this.props.match.params.userId)
             .then(user => {this.setState({user: user.user})})
-    }
-
-
-    render(){
-        // debugger
+        }
+        
+        
+        render(){
+            
         return(
             <div>
                 <div className="user-bio">
                     <div className="profile-picture-container">
                         <img className ="profile-picture" src={this.state.user.photoURL} alt="profile-picture" />
                     </div>
-                    <div className="profile-picture">{this.state.user.username}</div>
-                    <div className="user-bio-username">{this.props.currentUser}</div>
-                    <div>hey</div>
+                    <div className="bio">
+                        <div className="user-bio-username">{this.state.user.username}</div>
+                        <br/>
+                        <br/>
+                            <div className="below-username">
+                                <br/><br/>
+                        <div className="user-bio-grey">Location: {this.state.user.location}</div>
+                      
+                            <div className="user-bio-grey">Genre: {this.state.user.genre}</div>
+                      
+                        <div className="user-bio-description">{this.state.user.description}</div>
+                            </div>
+                    </div>
                 </div>
             </div>
         )
@@ -30,4 +40,3 @@ class UserShow extends React.Component {
 }
 
 export default UserShow;
-{/* <div>{this.state.user.albums[0].title}</div> */}
