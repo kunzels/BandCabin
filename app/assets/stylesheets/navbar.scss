@@ -1,7 +1,6 @@
 .nav-bar{
    float: none;
    display: inline-flex;
-   align-items: baseline;
    justify-content: space-between;
    padding-bottom: 10px;
    margin-top: 5px;
@@ -19,17 +18,30 @@
      font-family: Arial, Helvetica, sans-serif;
  }
 
+ .gradient{
+     padding-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#ffe477, #fb7b47);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
 
 /* .left-side-nav{
 } */
-.left-side-nav > p{
-    padding-left: 12px;
+.left-side-nav {
+    padding-top: 20px;
+    padding-left: 50px;
     margin-top: 0px;
 }
 
-/* .right-side-nav{
-
-} */
+.right-side-nav{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+   margin-top: 62px;
+} 
 
 
  .login-links-left{
@@ -42,10 +54,17 @@
 .login-links-right{
     text-decoration: none;
     color: black;
-    font-style: bold;
+    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    padding-right: 30px;
-    padding-top: 50px;
+    margin-right: 20px;
+ }
+
+ .login-links-login{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 150px;
  }
 
  .logo-link{
@@ -54,3 +73,37 @@
     padding-left: 40px;
 }
 
+.left-side-logged-nav{
+    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+
+.right-side-logged-nav{
+    padding-right: 50px;
+}
+
+.collection-button{
+    margin-right: 20px;
+    padding-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    float: right;
+}
+
+.logout-btn{
+    border: none;
+    background-color: inherit;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    padding-right: 20px;
+    float: right;
+}

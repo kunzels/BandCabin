@@ -10,6 +10,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+// .form{
+//    width: 500px;
+//    justify-content: center;
+//    align-items: center;
+// }
+
 .login-input{
     display: flex;
     align-items: center;
@@ -31,12 +37,18 @@
     font-size: 16px;
     margin-bottom: 20px;
 }
-/* .input{
-    
-} */
+.demo-login-btn{
+    background-color: white;
+    color: rgb(26,24,23)
+}
+
+.demo{
+    display: flex;
+}
+
 h3{
     font-size: small;
-    
+    text-align: center;
 }
 /* form input[type=username], */
 form input[type=text],
@@ -45,4 +57,9 @@ form input[type=artist],
 form input[type=password] {
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.signup-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
