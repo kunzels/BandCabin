@@ -4,7 +4,7 @@ import AlbumForm from "./album_form"
 
 const msp = ({session, entities: {users}}) => {
     return {
-        currentUser:users[session.id]
+        currentUser: users[session.id]
     }
 }
 
