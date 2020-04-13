@@ -7,16 +7,21 @@ class Api::AlbumsController < ApplicationController
     end
 
     def show
-        @album = Album.find_by(params[:id])
+        @album = Album.find_by(id: params[:id])
     end
 
     def create
-        @album = Album.create(album_params)
-        render :show
+      
+        @album = current_user.albums.new(album_params)
+            if @album.save
+                render :show
+            else
+                render json: @album, status: :unprocessable_entity
+            end
     end
 
     def album_params
-        params.require(:album).permit(:title, :user_id)
+        params.require(:album).permit(:title, :user_id, :price, :description, :genre)
     end
 
 end

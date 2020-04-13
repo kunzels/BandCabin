@@ -8,5 +8,5 @@
 
 User.destroy_all
 User.create!({username: 'Demoth', artist: 'TheDemoBoys', email:'Demoman@this.com', password:'demoguy5000', location:"Rome", description:"A Roman BandMan", genre:"Math Rock"})
-Album.create(title: "DemoAlbum", user_id: User.first.id)
+Album.create(title: "DemoAlbum", user_id: User.first.id, price: 50, description: "Good Album", genre: "Math Rock")
 User.first.photo.attach(io: File.open("/Users/stevenk/Documents/bandcabin/jason.jpg"), filename: "jason.jpg")
