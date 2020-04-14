@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class UserShow extends React.Component {
     constructor(props){
@@ -22,16 +23,15 @@ class UserShow extends React.Component {
                     </div>
                     <div className="bio">
                         <div className="user-bio-username">{this.state.user.username}</div>
-                        <br/>
-                        <br/>
-                            <div className="below-username">
-                                <br/><br/>
-                        <div className="user-bio-grey">Location: {this.state.user.location}</div>
-                      
+        <br/><br/>
+                        <div className="below-username">
+        <br/><br/>
+                            <div className="user-bio-grey">Location: {this.state.user.location}</div>
                             <div className="user-bio-grey">Genre: {this.state.user.genre}</div>
-                      
-                        <div className="user-bio-description">{this.state.user.description}</div>
-                            </div>
+                            <div className="user-bio-description">Description: {this.state.user.description}</div>
+                          
+                            <Link to="/albums/new">Create New Album</Link>
+                        </div>
                     </div>
                 </div>
             </div>
