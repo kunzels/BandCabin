@@ -6,7 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Album.destroy_all
 User.destroy_all
 User.create!({username: 'Demoth', artist: 'TheDemoBoys', email:'Demoman@this.com', password:'demoguy5000', location:"Germany", description:"German man with a German plan.", genre:"Kraut Rock"})
 Album.create(title: "DemoAlbum", user_id: User.first.id, price: 50, description: "Good Album", genre: "Kraut Rock")
-User.first.photo.attach(io: File.open("/Users/stevenk/Documents/bandcabin/jason.jpg"), filename: "jason.jpg")
+User.first.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/jason.jpg"), filename: "jason.jpg")

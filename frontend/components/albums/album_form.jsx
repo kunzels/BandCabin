@@ -27,14 +27,17 @@ class AlbumForm extends React.Component{
         this.props.createAlbum({album:album}, this.props.currentUser.id)
         .then((album) => history.push(`/albums/${album.album.id}`))   
     }
+    
 
     render(){
+        
         return(
             <div className="album-form-container" >
                 <form onSubmit={this.handleSubmit}>
                     <h3 className="signup-title"> Create an Album </h3>
 
                     <div className="login-input">
+                        <div>{this.state.title}</div>
                         <div className="input">
                             <label htmlFor="title">title:</label>
                             <input id="title" type="text" value={this.state.title} onChange={this.update('title')} />
