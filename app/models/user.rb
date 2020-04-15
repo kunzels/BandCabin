@@ -21,7 +21,7 @@ class User < ApplicationRecord
     validates :username, :email, :artist, uniqueness: true
     validates :password, length: {minimum: 6}, allow_nil: true
 
-    after_initialize :ensure_session_token
+    after_initialize :ensure_session_token, :ensure_photo
 
     has_many :albums
     has_one_attached :photo
@@ -30,6 +30,12 @@ class User < ApplicationRecord
     user = User.find_by(username: username)
     return nil unless user
     user.is_password?(password) ? user : nil
+  end
+
+  def ensure_photo 
+      if self.photo.attached? == false
+        self.photo.attach(io: open("app/assets/images/defuser.png"), filename: "defuser.png")
+      end
   end
 
   def password=(password)
