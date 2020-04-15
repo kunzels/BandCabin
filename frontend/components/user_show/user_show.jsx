@@ -28,8 +28,10 @@ class UserShow extends React.Component {
                             <div className="user-bio-grey">Location: {this.state.user.location}</div>
                             <div className="user-bio-grey">Genre: {this.state.user.genre}</div>
                             <div className="user-bio-description">Description: {this.state.user.description}</div>
-                          
-                            <Link to="/albums/new">Create New Album</Link>
+
+                            <div className="Album-create-link-high">
+                            <Link to="/albums/new" className="album-create-link">Create New Album</Link>
+                            </div>
                         </div>
                     </div>
                 </div>

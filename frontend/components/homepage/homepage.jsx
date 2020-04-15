@@ -2,6 +2,7 @@ import React from 'react';
 
 const HomePage = () => {
     return(
+    <div className="homepage-container">
         <div className="homepage">
             <div className="item-container">
                 <div className="big-item">
@@ -16,6 +17,7 @@ const HomePage = () => {
             </div>
             <p className="factoid">Fans have paid artists $484 million using Bandcamp, and $17.7 million in the last 30 days alone.</p>
         </div>
+    </div>
     );
 }
 

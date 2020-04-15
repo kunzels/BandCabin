@@ -1,0 +1,48 @@
+.album-form-container{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(209, 207, 207);
+
+}
+
+.album-form{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+.left-side-album-create{
+    display: flex;
+    width: 50%;
+}
+
+.right-side-album-create{
+    width: 50%;
+
+}
+
+.album-form-create-link{
+    border: 1px solid #939497;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 3px 9px;
+    color: #939497;
+    width: 100px;
+}
+
+.square{
+    width: 55px;
+    height: 55px;
+    border: 1px dotted black;
+    z-index: 1;
+}
+.album-preview{
+    padding-left: 10px;
+}
+
+.form-background{
+    background-color: rgb(231, 231, 231);
+    height: 600px;
+}
