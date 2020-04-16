@@ -45,24 +45,24 @@ class AlbumForm extends React.Component{
                     </div>
                     <div className="right-side-album-input">
                         <div className="album-input">
-                            <label htmlFor="title">title:</label>
+                            <label htmlFor="title">album title</label>
                             <input id="title" type="text" value={this.state.title} onChange={this.update('title')} />
                         </div>
                         <br />
-                        <div className="album-input">
-                            <label className="email-input" htmlFor="description">description:</label>
-                            <input id="description" type="text" value={this.state.description} onChange={this.update('description')} />
-                        </div>
+                            <div className="album-input">
+                                <label htmlFor="genre">genre</label>
+                                <input id="genre" type="text" value={this.state.genre} onChange={this.update('genre')} />
+                            </div>
                         <br />
                         <div className="album-input">
-                            <label htmlFor="price">Price:</label>
+                            <label htmlFor="price">price</label>
                             <input id="price" type="text" value={this.state.price} onChange={this.update('price')} />
                         </div>
                         <br />
-                        <div className="album-input">
-                            <label htmlFor="genre">genre:</label>
-                            <input id="genre" type="text" value={this.state.genre} onChange={this.update('genre')} />
-                        </div>
+                            <div className="album-input">
+                                <label className="description-input" htmlFor="description">description</label>
+                                <input id="description" type="text" value={this.state.description} onChange={this.update('description')} />
+                            </div>
                         <br />
                         <input className="form-submit-button" type="submit"/>
                     </div>
