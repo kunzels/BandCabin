@@ -1,0 +1,57 @@
+.album-show-container {
+    display: flex;
+    height: 100%;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.album-show-left{
+    width: 100%;
+    margin-right: 180px;
+}
+
+.album-show-title{
+    width: 100%;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.album-show-artist{
+    font-size: 13px;
+}
+.album-show-right{
+
+}
+.album-show-profile{
+    width: 150px;
+    height: 100px;
+    border-color: black;
+    border: black;
+    object-fit: cover;
+    padding-left: 60px;
+}
+
+.album-show-under-profile{
+    padding-left: 60px;
+}
+
+.album-show-location{
+    font-size: 12px;
+    color: grey;
+}
+
+.album-show-description{
+    font-size: 11px;
+    width: 60%;
+    word-wrap: break-word;
+}
+
+.album-art{
+    width: 320px;
+    height: 320px;
+    border-color: black;
+    border: black;
+    object-fit: cover;
+}
