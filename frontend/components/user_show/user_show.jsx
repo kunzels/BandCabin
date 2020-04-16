@@ -6,14 +6,23 @@ class UserShow extends React.Component {
         super(props)
         this.state = {user: ""}
     }
-
+    
     componentDidMount () {
         this.props.fetchUser(this.props.match.params.userId)
-            .then(user => {this.setState({user: user.user})})
+        .then(user => {this.setState({user: user.user})})
+    }
+    
+    
+    render(){
+        debugger
+        if (typeof this.state.user.albums === "undefined"){
+            return (<div></div>)
         }
-        
-        
-        render(){
+
+          const albumTitles = Object.values(this.state.user.albums).map(album => {
+              return <div><img className="profile-picture" src={album.photoURL} alt="profile-picture" /><Link to={`/albums/${album.id}`}><li>{album.title}</li></Link></div>
+          })
+
         return(
             <div>
                 <div className="user-bio">
@@ -32,6 +41,10 @@ class UserShow extends React.Component {
                             <div className="Album-create-link-high">
                             <Link to="/albums/new" className="album-create-link">Create New Album</Link>
                             </div>
+                            <div>Discograpy: ({Object.values(this.state.user.albums).length})</div>
+                            <ul>
+                                {albumTitles}
+                            </ul>
                         </div>
                     </div>
                 </div>

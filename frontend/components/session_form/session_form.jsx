@@ -1,6 +1,6 @@
 import React from 'react';
 
-const demo_user = {username: 'Demoth', artist: 'TheDemoBoys', email:'Demoman@this.com', password:'demoguy5000'}
+const demo_user = { username: 'KingGizz', artist: 'King Gizzard and the Lizard Wizard', email: 'gizz@gmail.com', password: 'demoguy5000', location: "Austrailia", description: "Gamma Knife", genre: "Prog Rock"}
 class SessionForm extends React.Component {
     constructor(props) {
         super(props);
