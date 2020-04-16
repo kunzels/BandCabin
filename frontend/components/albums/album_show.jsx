@@ -13,7 +13,10 @@ class AlbumShow extends React.Component {
 
     render(){
         return(
+            <div>
             <div>{this.state.album.title}</div>
+            <img className="profile-picture" src={this.state.album.photoURL} alt="profile-picture" />
+            </div>
         )
     }
 

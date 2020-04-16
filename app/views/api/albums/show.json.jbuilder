@@ -1,1 +1,1 @@
-json.extract! @album, :id, :title, :user_id, :price, :description, :genre
+json.partial! "api/albums/album", album: @album
