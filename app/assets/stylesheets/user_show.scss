@@ -53,3 +53,18 @@
     color: #939497;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding-bottom: 10%;
+ 
+}
+
+.discover{
+    display: flex;
+    padding-top: 70px;
+    width: 100%;
+}
+.discover-container{
+}

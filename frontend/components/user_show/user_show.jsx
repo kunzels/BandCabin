@@ -20,7 +20,7 @@ class UserShow extends React.Component {
         }
 
           const albumTitles = Object.values(this.state.user.albums).map(album => {
-              return <div><img className="profile-picture" src={album.photoURL} alt="profile-picture" /><Link to={`/albums/${album.id}`}><li>{album.title}</li></Link></div>
+              return <div><Link to={`/albums/${album.id}`}><img className="profile-picture" src={album.photoURL} alt="profile-picture" /><div>{album.title}</div></Link></div>
           })
 
         return(
@@ -39,12 +39,14 @@ class UserShow extends React.Component {
                             <div className="user-bio-description">Description: {this.state.user.description}</div>
 
                             <div className="Album-create-link-high">
-                            <Link to="/albums/new" className="album-create-link">Create New Album</Link>
+                                <Link to="/albums/new" className="album-create-link">Create New Album</Link>
                             </div>
-                            <div>Discograpy: ({Object.values(this.state.user.albums).length})</div>
-                            <ul>
-                                {albumTitles}
-                            </ul>
+                            <div className="discover-container">
+                                <div className="discover">Discography ({Object.values(this.state.user.albums).length}) :</div>
+                                    <div className="wrapper">
+                                        {albumTitles}
+                                    </div>
+                            </div>
                         </div>
                     </div>
                 </div>
