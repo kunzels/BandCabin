@@ -1,4 +1,6 @@
 import React from 'react';
+import BandcampPlayer from 'react-bandcamp'
+
 
 class AlbumShow extends React.Component {
     constructor(props){

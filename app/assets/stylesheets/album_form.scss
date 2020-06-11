@@ -35,10 +35,11 @@
 }
 
 .square{
-    width: 55px;
-    height: 55px;
+    width: 100px;
+    height: 100px;
     border: 1px dotted black;
     z-index: 1;
+    object-fit: contain;
 }
 .album-preview{
     padding-left: 10px;

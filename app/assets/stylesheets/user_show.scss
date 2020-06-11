@@ -18,6 +18,7 @@
 .user-bio-username{
     font-size: 30px;
     text-align: center;
+    margin-top: 150px;
 }
 .bio{
     display: inline-flex;
@@ -36,6 +37,18 @@
     
 }
 
+.user-bio-location{
+    color:#828282;
+    font-size: small;
+    padding-bottom: 2px;
+    padding-top: 160px;
+}
+
+.user-bio-genre{
+     color:#828282;
+    font-size: small;
+    padding-bottom: 2px;
+}
 .user-bio-grey{
     color:#828282;
     font-size: small;
@@ -44,7 +57,7 @@
 .user-bio-description{
     padding-top: 5px;
     padding-bottom: 10px;
-    font-size: 12px;
+    font-size: 15px;
     width: 800px;
     word-wrap: break-word;
 }
@@ -72,4 +85,8 @@
     padding-bottom: 15px;
 }
 .discover-container{
+}
+
+.user-bio{
+    display: flex;
 }

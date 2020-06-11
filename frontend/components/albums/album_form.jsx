@@ -9,9 +9,13 @@ class AlbumForm extends React.Component{
             user_id: this.props.currentUser.id,
             price: 0,
             description: '',
-            genre: ''
+            genre: '',
+            imageUrl: null,
+            imageFile: null
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.update = this.update.bind(this);
+        this.handleFile = this.handleFile.bind(this);
     }
 
     update(field) {
@@ -20,30 +24,58 @@ class AlbumForm extends React.Component{
         });
     }
 
+    handleFile(e){
+        const reader = new FileReader();
+        const file = e.currentTarget.files[0];
+        reader.onloadend = () =>
+            this.setState({ imageUrl: reader.result, imageFile: file });
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            this.setState({ imageUrl: "", imageFile: null });
+        }
+    }
+
     handleSubmit(e) {
         e.preventDefault();
+        const formData = new FormData();
+        formData.append('album[title]', this.state.title);
+        formData.append('album[genre]', this.state.genre);
+        formData.append('album[price]', this.state.price); 
+        formData.append('album[description]', this.state.description); 
+        if (this.state.imageFile) {
+            formData.append('album[photo]', this.state.imageFile);
+        }
         const history = this.props.history;
-        const album = Object.assign({}, this.state);
-        this.props.createAlbum({album:album}, this.props.currentUser.id)
+        this.props.createAlbum(formData)
         .then((album) => history.push(`/albums/${album.album.id}`))   
     }
-    
-
+  
     render(){
-        
+
+        let imagePreview;
+        if(this.state.imageUrl){
+            imagePreview = <img src={this.state.imageUrl} className="square" alt=""/>
+        }
         return(
         <div className="form-background">
             <div className="album-form-container" >
                 <form className="album-form" onSubmit={this.handleSubmit}>
                    
                     <div className="left-side-album-create">
-                        <div className="square"></div>
+                            <div className="square">{imagePreview}</div>
                             <div className="album-preview">
                                 <div>{this.state.title || "Untitled Album"}</div>
                                 <div>by {this.props.currentUser.artist}</div>
                             </div>
+                        
                     </div>
                     <div className="right-side-album-input">
+                        <div>Choose Album Art</div>
+                            <div className="image-input">
+                                <input type="file" onChange={this.handleFile} />
+                            </div>
                         <div className="album-input">
                             <label htmlFor="title">album title</label>
                             <input id="title" type="text" value={this.state.title} onChange={this.update('title')} />

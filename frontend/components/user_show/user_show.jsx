@@ -26,8 +26,8 @@ class UserShow extends React.Component {
                             <br /><br />
                             <div className="below-username">
                                 <br /><br />
-                                <div className="user-bio-grey">Location: {this.state.user.location}</div>
-                                <div className="user-bio-grey">Genre: {this.state.user.genre}</div>
+                                <div className="user-bio-location">Location: {this.state.user.location}</div>
+                                <div className="user-bio-genre">Genre: {this.state.user.genre}</div>
                                 <div className="user-bio-description">{this.state.user.description}</div>
 
                                 <div className="Album-create-link-high">
@@ -56,8 +56,8 @@ class UserShow extends React.Component {
         <br/><br/>
                         <div className="below-username">
         <br/><br/>
-                            <div className="user-bio-grey">Location: {this.state.user.location}</div>
-                            <div className="user-bio-grey">Genre: {this.state.user.genre}</div>
+                            <div className="user-bio-location">Location: {this.state.user.location}</div>
+                            <div className="user-bio-genre">Genre: {this.state.user.genre}</div>
                             <div className="user-bio-description">{this.state.user.description}</div>
 
                             <div className="Album-create-link-high">
