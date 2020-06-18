@@ -13,14 +13,16 @@ class Api::AlbumsController < ApplicationController
     def create
         @album = current_user.albums.new(album_params)
             if @album.save
+                # @album.build_tracks
                 render "api/albums/show"
             else
+                debugger
                 render json: @album, status: :unprocessable_entity
             end
     end
 
     def album_params
-        params.require(:album).permit(:title, :price, :description, :photo, :genre)
+        params.require(:album).permit(:title, :price, :description, :photo, :genre, tracks_attributes: [:title, :audio_file])
     end
 
 end

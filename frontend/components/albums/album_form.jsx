@@ -11,11 +11,17 @@ class AlbumForm extends React.Component{
             description: '',
             genre: '',
             imageUrl: null,
-            imageFile: null
+            imageFile: null,
+            track_attributes: [],
+            audioFile: null,
+            trackTitle: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
         this.handleFile = this.handleFile.bind(this);
+        this.handleAudioFile = this.handleAudioFile.bind(this);
+        this.updateTrackTitle = this.updateTrackTitle.bind(this);
+        this.addTrack = this.addTrack.bind(this);
     }
 
     update(field) {
@@ -47,9 +53,45 @@ class AlbumForm extends React.Component{
         if (this.state.imageFile) {
             formData.append('album[photo]', this.state.imageFile);
         }
+        this.state.track_attributes.forEach((track) => {
+            formData.append('album[tracks_attributes][][title]', track.title);
+            formData.append('album[tracks_attributes][][audio_file]', track.audio_file);
+        });
+
         const history = this.props.history;
         this.props.createAlbum(formData)
-        .then((album) => history.push(`/albums/${album.album.id}`))   
+        .then((album) => {
+            debugger;
+            history.push(`/albums/${album.album.id}`)
+        })   
+    }
+
+    handleAudioFile(e) {
+        e.preventDefault();
+        this.setState({
+            audioFile: e.target.files[0]
+        });
+    }
+
+    updateTrackTitle(e){
+        e.preventDefault();
+        this.setState({
+            trackTitle: e.target.value
+        });
+    }
+
+    addTrack(e){
+        e.preventDefault();
+        const newTrack = {
+            title: this.state.trackTitle,
+            audio_file: this.state.audioFile
+        }
+        let tracks = this.state.track_attributes.concat(newTrack);
+        this.setState({
+            track_attributes: tracks, 
+            trackTitle: "",
+            audioFile: null
+        });
     }
   
     render(){
@@ -58,18 +100,43 @@ class AlbumForm extends React.Component{
         if(this.state.imageUrl){
             imagePreview = <img src={this.state.imageUrl} className="square" alt=""/>
         }
+        let trackTitle;
+        if(this.state.audioFile){
+            trackTitle = <div>
+                            <input type="text" value={this.state.trackTitle} onChange={this.updateTrackTitle}/>
+                            <button onClick={this.addTrack}>Add Track</button>
+                        </div>
+
+        }
+        let addedTracks;
+        if(this.state.track_attributes.length){
+            addedTracks = this.state.track_attributes.map(track => {
+                return(
+                    <li>{track.title}</li>
+                )
+            })
+        }
+
         return(
         <div className="form-background">
             <div className="album-form-container" >
                 <form className="album-form" onSubmit={this.handleSubmit}>
                    
                     <div className="left-side-album-create">
+                        <div className="left-side-top">
                             <div className="square">{imagePreview}</div>
                             <div className="album-preview">
                                 <div>{this.state.title || "Untitled Album"}</div>
                                 <div>by {this.props.currentUser.artist}</div>
                             </div>
-                        
+                        </div>
+                        <div className="left-side-bottom">
+                            <input type="file" onChange={this.handleAudioFile} />
+                            {trackTitle}
+                            <ul>
+                                {addedTracks}
+                            </ul>
+                        </div>
                     </div>
                     <div className="right-side-album-input">
                         <div>Choose Album Art</div>
