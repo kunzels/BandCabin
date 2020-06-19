@@ -60,9 +60,9 @@ class AlbumForm extends React.Component{
 
         const history = this.props.history;
         this.props.createAlbum(formData)
-        .then((album) => {
-            debugger;
-            history.push(`/albums/${album.album.id}`)
+        .then((data) => {
+            // debugger;
+            history.push(`/albums/${data.payload.album.id}`)
         })   
     }
 
@@ -110,9 +110,9 @@ class AlbumForm extends React.Component{
         }
         let addedTracks;
         if(this.state.track_attributes.length){
-            addedTracks = this.state.track_attributes.map(track => {
+            addedTracks = this.state.track_attributes.map((track, idx) => {
                 return(
-                    <li>{track.title}</li>
+                    <li key={idx}>{track.title}</li>
                 )
             })
         }

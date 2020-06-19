@@ -8,14 +8,14 @@ export const receiveAlbums = albums => ({
     type: RECEIVE_ALBUMS,
     albums
 })
-export const receiveAlbum = album => ({
+export const receiveAlbum = payload => ({
     type: RECEIVE_ALBUM,
-    album
+    payload
 })
 
-export const receiveNewAlbum = (album) => ({
+export const receiveNewAlbum = (payload) => ({
     type: RECEIVE_NEW_ALBUM,
-    album
+    payload
 })
 
 export const fetchAlbums = () => dispatch => (
@@ -25,10 +25,10 @@ export const fetchAlbums = () => dispatch => (
 
 export const fetchAlbum = id => dispatch => (
     APIUtil.fetchAlbum(id)
-        .then(album => (dispatch(receiveAlbum(album))))
+        .then(payload => (dispatch(receiveAlbum(payload))))
 )
 
 export const createAlbum = (data, userId) => dispatch => (
     APIUtil.createAlbum(data, userId)
-        .then(album => (dispatch(receiveNewAlbum(album))))
+        .then(payload => (dispatch(receiveAlbum(payload))))
 )

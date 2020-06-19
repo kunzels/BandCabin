@@ -1,24 +1,36 @@
 import React from 'react';
-import BandcampPlayer from 'react-bandcamp'
+import BandcampPlayer from 'react-bandcamp';
+import MusicPlayer from '../music_player/music_player';
 
 
 class AlbumShow extends React.Component {
     constructor(props){
         super(props)
-        this.state = {album: ""}
+        this.state = {album: null}
     }
 
     componentDidMount() {
         this.props.fetchAlbum(this.props.match.params.albumId)
-            .then(album => { this.setState({ album: album.album }) })
+            .then(() => {
+                this.setState({ album: this.props.album });
+            })
     }
 
     render(){
+        if (!this.state.album) return null;
+
+        let trackInfo;
+
+        if (this.props.tracks.length) {
+            trackInfo = <MusicPlayer tracks={this.props.tracks} />
+        }
+
         return(
             <div className="album-show-container">
                 <div className="album-show-left">
                     <div className="album-show-title">{this.state.album.title}</div>
                     <div className="album-show-artist">by {this.state.album.artistName}</div>
+                    {trackInfo}
                 </div>
                 <div>
                     <img className="album-art" src={this.state.album.photoURL} alt="profile-picture" />

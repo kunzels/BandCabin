@@ -1,7 +1,15 @@
-json.extract! @album, :id, :title, :user_id, :price, :description, :genre
-json.photoURL url_for(@album.photo)
-json.username @album.user.username
-json.artistName @album.user.artist
-json.location @album.user.location
-json.userPhoto url_for(@album.user.photo)
-json.albums @album.user.albums
+json.album do
+  json.partial! 'api/albums/album', album: @album
+end
+
+if @album.tracks.length > 0
+  json.tracks do
+    @album.tracks.each do |track|
+      json.set! track.id do
+        json.partial! 'api/tracks/track', track: track
+      end
+    end
+  end
+else
+  json.tracks {}
+end
