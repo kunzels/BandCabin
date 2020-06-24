@@ -16,7 +16,6 @@ class Api::AlbumsController < ApplicationController
                 # @album.build_tracks
                 render "api/albums/show"
             else
-                debugger
                 render json: @album, status: :unprocessable_entity
             end
     end

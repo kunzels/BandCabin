@@ -14,7 +14,7 @@ class AlbumForm extends React.Component{
             imageFile: null,
             track_attributes: [],
             audioFile: null,
-            trackTitle: ""
+            trackTitle: "Track Title"
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
@@ -61,7 +61,6 @@ class AlbumForm extends React.Component{
         const history = this.props.history;
         this.props.createAlbum(formData)
         .then((data) => {
-            // debugger;
             history.push(`/albums/${data.payload.album.id}`)
         })   
     }
@@ -102,8 +101,8 @@ class AlbumForm extends React.Component{
         }
         let trackTitle;
         if(this.state.audioFile){
-            trackTitle = <div>
-                            <input type="text" value={this.state.trackTitle} onChange={this.updateTrackTitle}/>
+            trackTitle = <div className="track-title">
+                            <input className="track-text" type="text" value={this.state.trackTitle} onChange={this.updateTrackTitle}/>
                             <button onClick={this.addTrack}>Add Track</button>
                         </div>
 
@@ -131,35 +130,36 @@ class AlbumForm extends React.Component{
                             </div>
                         </div>
                         <div className="left-side-bottom">
-                            <input type="file" onChange={this.handleAudioFile} />
+                            <div className="list-text">Track List</div>
+                            <input className="choose-file" type="file" onChange={this.handleAudioFile} />
                             {trackTitle}
-                            <ul>
+                            <ul className="added-tracks">
                                 {addedTracks}
                             </ul>
                         </div>
                     </div>
                     <div className="right-side-album-input">
-                        <div>Choose Album Art</div>
+                        <div className="album-art-text">Choose Album Art</div>
                             <div className="image-input">
                                 <input type="file" onChange={this.handleFile} />
                             </div>
                         <div className="album-input">
-                            <label htmlFor="title">album title</label>
+                            <label htmlFor="title">Album Title</label>
                             <input id="title" type="text" value={this.state.title} onChange={this.update('title')} />
                         </div>
                         <br />
                             <div className="album-input">
-                                <label htmlFor="genre">genre</label>
+                                <label htmlFor="genre">Genre</label>
                                 <input id="genre" type="text" value={this.state.genre} onChange={this.update('genre')} />
                             </div>
                         <br />
                         <div className="album-input">
-                            <label htmlFor="price">price</label>
+                            <label htmlFor="price">Price</label>
                             <input id="price" type="text" value={this.state.price} onChange={this.update('price')} />
                         </div>
                         <br />
                             <div className="album-input">
-                                <label className="description-input" htmlFor="description">description</label>
+                                <label className="description-input" htmlFor="description">Description</label>
                                 <input id="description" type="text" value={this.state.description} onChange={this.update('description')} />
                             </div>
                         <br />

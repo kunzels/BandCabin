@@ -13,7 +13,6 @@ class MusicPlayer extends React.Component {
   }
 
   playTrack(e) {
-    debugger;
     let player = document.getElementById('musicplayer');
     let currentTrack = this.props.tracks[e.target.id];
     this.setState({currentTrack, playing: true}, () => {

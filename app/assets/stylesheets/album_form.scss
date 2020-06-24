@@ -18,11 +18,48 @@
 .left-side-album-create{
     display: flex;
     width: 50%;
+    flex-direction: column;
+}
+
+.left-side-top{
+    display: flex;
+    flex-direction: row;
+}
+.left-side-bottom{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    text-emphasis: none;
+}
+
+.track-text{
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+.added-tracks{
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.list-text{
+    margin-bottom: 5px;
+}
+
+.choose-file{
+    max-width: 190px;
 }
 
 .right-side-album-create{
     width: 50%;
+}
 
+.album-art-text{
+    margin-bottom: 5px;
+}
+
+.image-input{
+    margin-bottom: 5px;
 }
 
 .album-form-create-link{
