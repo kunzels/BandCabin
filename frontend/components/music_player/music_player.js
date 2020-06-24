@@ -35,33 +35,34 @@ class MusicPlayer extends React.Component {
 
   render() {
     let currentTrackInfo;
-
     let button;
 
     if (this.state.playing) {
-      button = <button onClick={this.pause}>Pause</button>
+      button = <span className="pause" onClick={this.pause}>Pause</span>
     } else {
-      button = <button onClick={this.play}>Play</button>
+      button = <span className="play" onClick={this.play}>Play</span>
     }
 
 
     if (this.state.currentTrack.title) {
-      currentTrackInfo = <div>
-        <h3>Now Playing</h3>
+      currentTrackInfo = <div className="playing-track">
         {button}
-        <h2>{this.state.currentTrack.title}</h2>
+        <h2 className="currentTrack">{this.state.currentTrack.title}</h2>
+      </div>;
+    } else{
+       currentTrackInfo = <div className="playing-track">
+        {/* {button} */}
+        <h2>Choose a track</h2>
       </div>;
     }
 
     let trackInfo;
-
+    
     if (this.props.tracks.length) {
       trackInfo = this.props.tracks.map((track, idx) => {
-        return (<li key={idx}>
-          <button onClick={this.playTrack} id={idx}>
-            Play
-          </button>
-          <span>{track.title}</span>
+        return (<li className="track" key={idx}>
+          <span className="play-button" type = "submit" onClick={this.playTrack} id={idx}/>
+          <span className="track-in-list">{idx + 1}. {track.title}</span>
         </li>)
       })
     }
@@ -69,7 +70,7 @@ class MusicPlayer extends React.Component {
     return (
       <div>
         {currentTrackInfo}
-        <ul>
+        <ul className="tracks">
           {trackInfo}
         </ul>
         <audio

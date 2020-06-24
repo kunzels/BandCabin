@@ -44,14 +44,65 @@
 
 .album-show-description{
     font-size: 11px;
-    width: 60%;
+    width: 100%;
     word-wrap: break-word;
 }
 
 .album-art{
     width: 320px;
     height: 320px;
+    margin-left: 40px;
     border-color: black;
     border: black;
     object-fit: cover;
+}
+
+.tracks{
+    display: flex;
+    margin-top: 40px;
+    list-style-type: none;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.track{
+    margin-top: 5px;
+}
+
+.playing-track{
+    margin-top: 20px;
+    display: flex;
+    white-space: nowrap;
+    height: 21px;
+}
+
+.currentTrack{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.track-in-list{
+    margin-left: 5px;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.play-button{
+    width: 20px;
+    height: 20px;
+    content: url("./play.png");
+}
+
+.pause{
+    width: 50px;
+    height: 50px;
+    content: url("./pause.png");
+
+}
+
+.play{
+    width: 50px;
+    height: 50px;
+    content: url("./play.png");
+
 }
