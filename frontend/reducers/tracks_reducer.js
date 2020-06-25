@@ -7,7 +7,7 @@ const tracksReducer = (state ={}, action) => {
             if (action.payload.tracks) {
                 return action.payload.tracks;
             } else {
-                return state;
+                return {};
             }
         default:
             return state;
