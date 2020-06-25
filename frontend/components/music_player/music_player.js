@@ -38,9 +38,9 @@ class MusicPlayer extends React.Component {
     let button;
 
     if (this.state.playing) {
-      button = <span className="pause" onClick={this.pause}>Pause</span>
+      button = <img src={window.pause}className="pause" onClick={this.pause}/>
     } else {
-      button = <span className="play" onClick={this.play}>Play</span>
+      button = <img src={window.play} className="play" onClick={this.play}/>
     }
 
 
@@ -61,7 +61,7 @@ class MusicPlayer extends React.Component {
     if (this.props.tracks.length) {
       trackInfo = this.props.tracks.map((track, idx) => {
         return (<li className="track" key={idx}>
-          <span className="play-button" type = "submit" onClick={this.playTrack} id={idx}/>
+          <img src={window.play} className="play-button" onClick={this.playTrack} id={idx}/>
           <span className="track-in-list">{idx + 1}. {track.title}</span>
         </li>)
       })
