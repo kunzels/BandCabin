@@ -15,7 +15,7 @@ const HomePage = () => {
                    <img className="gizzard" src={window.mf} />
                 </div>
             </div>
-            <p className="factoid">Fans have paid artists $484 million using Bandcamp, and $17.7 million in the last 30 days alone.</p>
+            <p className="factoid">Fans have paid artists $484 million using BandCabin, and $17.7 million in the last 30 days alone.</p>
         </div>
     </div>
     );

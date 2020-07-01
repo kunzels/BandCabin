@@ -42,7 +42,7 @@ class UserShow extends React.Component {
         }
 
           const albumTitles = Object.values(this.state.user.albums).map(album => {
-              return <div><Link to={`/albums/${album.id}`} className="album-link"><img className="profile-picture" src={album.photoURL} alt="profile-picture" /><div>{album.title}</div></Link></div>
+              return <div key={album.id}><Link to={`/albums/${album.id}`} className="album-link"><img className="profile-picture" src={album.photoURL} alt="profile-picture" /><div>{album.title}</div></Link></div>
           })
 
         return(

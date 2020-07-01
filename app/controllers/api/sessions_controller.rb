@@ -4,13 +4,11 @@ class Api::SessionsController < ApplicationController
         params[:user][:username],
         params[:user][:password]
     )
-    # sleep 2
+
     if @user
-      # debugger
       login(@user)
       render "api/users/show"
     else
-      # debugger
       render json: ["Invalid credentials"], status: 401
     end
   end

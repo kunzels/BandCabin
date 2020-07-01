@@ -10,17 +10,27 @@
 #  genre       :string
 #
 class Album < ApplicationRecord
-  validates :title, :user_id, presence: true
+  validates :title, :user_id, :price, :description, :genre, presence: true
   belongs_to :user
   has_many :tracks, inverse_of: :album
   has_one_attached :photo
   after_initialize :ensure_photo
   accepts_nested_attributes_for :tracks, :reject_if => :all_blank, :allow_destroy => true
+  validate :ensure_attributes, :on => :create
 
   def ensure_photo 
     if self.photo.attached? == false
       self.photo.attach(io: open("app/assets/images/defuser.png"), filename: "defuser.png")
     end
+  end
+
+  def ensure_attributes
+    errors.add(:title, 'Title cannot be blank') if !self.title
+    errors.add(:price, 'Price cannot be blank') if !self.price
+    price = self.price.to_i
+    errors.add(:price, 'Price must be a positive number') if price <= 0 unless price === 0
+    errors.add(:genre, 'Genre cannot be blank') if !self.genre
+    errors.add(:description, 'Description cannot be blank') if !self.description
   end
 
 end
