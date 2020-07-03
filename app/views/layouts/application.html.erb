@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta property="og:image" content="<%= image_url('screenshot.png') %>" />
+    <meta property="og:image" content="<%= image_url('screenshot.png') %>"/>
+    <meta property="og:title" content="BandCabin"/>
+    <meta property="og:description" content="A clone of bandcamp using React."/>
+    <meta property="og:url" content="https://bandcabin.herokuapp.com/#/"/>
+    <link rel="shortcut icon" type='image/png' href="<%= image_url('fire.png') %>">
     <title>BandCabin</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -17,6 +21,7 @@
       window.defaultUser = "<%=image_url('defuser.png')%>";
       window.play = "<%=image_url('play.png')%>";
       window.pause = "<%=image_url('pause.png')%>";
+      window.screenshot = "<%=image_url('screenshot.png')%>";
     </script>
   </head>
   <body>
