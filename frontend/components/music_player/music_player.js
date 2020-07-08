@@ -6,7 +6,9 @@ class MusicPlayer extends React.Component {
     this.state = {
       playing: false,
       currentTrack: {title: '', trackUrl: null},
+      currentTime: 0,
       cursorPosition: 0,
+      duration: 0
     }
   
 
@@ -30,22 +32,32 @@ class MusicPlayer extends React.Component {
   }
 
   setCursorPosition() { 
+    let test = function display(seconds) {
+      const format = val => `0${Math.floor(val)}`.slice(-2)
+      const minutes = (seconds % 3600) / 60
+
+      return [minutes, seconds % 60].map(format).join(':')
+    }
         if (this.state.playing) {
             let player = document.getElementById('musicplayer');
+            if(player.duration) {
+            // console.log(`${player.duration}`, `${player.currentTime}`)
             let pos = Math.round(player.currentTime / player.duration * 1000);
             this.setState({
-                cursorPosition: pos
+                cursorPosition: pos,
+                duration: test(player.duration),
+                currentTime: test(player.currentTime)
             })
         }
+      }
     }
 
+
     changeCursorPosition(e){
-      debugger;
       let player = document.getElementById('musicplayer');
       if(!player || !player.currentTime) return;
       let duration = player.duration;
       let pos = e.target.value;
-      debugger;
       let currentTime = duration * (pos / 1000);
       this.setState({cursorPosition: pos}, () => {
         player.currentTime = currentTime;
@@ -54,12 +66,12 @@ class MusicPlayer extends React.Component {
   }
 
     playTrack(e) {
-      let player = document.getElementById('musicplayer');
-      let currentTrack = this.props.tracks[e.target.id];
-      this.setState({currentTrack, playing: true, cursorPosition: 0}, () => {
-      player.src = currentTrack.trackUrl;
-      player.play();
-    })
+        let player = document.getElementById('musicplayer');
+        let currentTrack = this.props.tracks[e.target.id];
+        this.setState({currentTrack, playing: true, cursorPosition: 0}, () => {
+        player.src = currentTrack.trackUrl;
+        player.play();
+      })
   }
 
   play() {
@@ -90,6 +102,7 @@ class MusicPlayer extends React.Component {
           {button}
           <div>
           <h2 className="currentTrack">{this.state.currentTrack.title}</h2>
+            <div className="track-time">{`${this.state.currentTime} | ${this.state.duration}`}</div>
               <input
                 id="the-progress-bar"
                 className="progress-bar"
