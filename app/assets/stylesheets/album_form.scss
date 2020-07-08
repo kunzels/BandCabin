@@ -87,3 +87,34 @@
     height: 600px;
     border-top: 1px dotted rgb(145, 145, 145);
 }
+
+.album-input{
+    max-width: 300px;
+    min-width: 300px;
+}
+
+.form-error-t{
+    margin-left: 48px;
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.form-error-p{
+    margin-left: 90px;
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}
+.form-error-g{
+    margin-left: 82px;
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}
+.form-error-d{
+    margin-left: 46px;
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}

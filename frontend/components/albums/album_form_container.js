@@ -1,11 +1,12 @@
 import {connect} from 'react-redux';
-import {createAlbum} from '../../actions/album_actions'
-import AlbumForm from "./album_form"
+import {createAlbum} from '../../actions/album_actions';
+import AlbumForm from "./album_form";
 import {withRouter} from 'react-router-dom';
 
-const msp = ({session, entities: {users}}) => {
+const msp = ({session, errors, entities: {users}}) => {
     return {
-        currentUser: users[session.id]
+        currentUser: users[session.id],
+        errors: errors.album
     }
 }
 

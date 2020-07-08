@@ -5,17 +5,43 @@ class MusicPlayer extends React.Component {
     super(props);
     this.state = {
       playing: false,
-      currentTrack: {title: '', trackUrl: null}
+      currentTrack: {title: '', trackUrl: null},
+      cursorPosition: 0,
     }
+  
+
     this.playTrack = this.playTrack.bind(this);
     this.play = this.play.bind(this);
     this.pause = this.pause.bind(this);
+    this.setCursorPosition = this.setCursorPosition.bind(this);
+
   }
 
-  playTrack(e) {
-    let player = document.getElementById('musicplayer');
+  componentDidMount() {
+    this.positionInterval = setInterval(() => {
+      this.setCursorPosition();
+    }, 100);
+  }
+
+
+  componentWillUnmount() {
+    clearInterval(this.positionInterval);
+  }
+
+  setCursorPosition() { 
+    if (this.state.playing) {
+        let player = document.getElementById('musicplayer');
+        let pos = Math.round(player.currentTime / player.duration * 1000);
+        this.setState({
+            cursorPosition: pos
+        })
+    }
+}
+
+    playTrack(e) {
+        let player = document.getElementById('musicplayer');
     let currentTrack = this.props.tracks[e.target.id];
-    this.setState({currentTrack, playing: true}, () => {
+    this.setState({currentTrack, playing: true, cursorPosition: 0}, () => {
       player.src = currentTrack.trackUrl;
       player.play();
     })
@@ -45,10 +71,24 @@ class MusicPlayer extends React.Component {
 
 
     if (this.state.currentTrack.title) {
-      currentTrackInfo = <div className="playing-track">
-        {button}
-        <h2 className="currentTrack">{this.state.currentTrack.title}</h2>
-      </div>;
+        currentTrackInfo = <div className="playing-track">
+          {button}
+          <div>
+          <h2 className="currentTrack">{this.state.currentTrack.title}</h2>
+              <input
+                id="the-progress-bar"
+                className="progress-bar"
+                type="range"
+                min="0"
+                max="1000"
+                step="1"
+                value={this.state.cursorPosition}
+                onInput={this.changeCursorPosition}
+                onChange={this.changeCursorPosition}
+              />
+        </div>
+        </div>
+
     } else{
        currentTrackInfo = <div className="playing-track">
         {/* {button} */}

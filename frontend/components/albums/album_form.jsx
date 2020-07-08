@@ -7,7 +7,7 @@ class AlbumForm extends React.Component{
         this.state = {
             title: '',
             user_id: this.props.currentUser.id,
-            price: 0,
+            price: '',
             description: '',
             genre: '',
             imageUrl: null,
@@ -116,6 +116,20 @@ class AlbumForm extends React.Component{
             })
         }
 
+        let titleError, genreError, priceError, descriptionError;
+        if (this.props.errors.title) {
+            titleError = this.props.errors.title;
+        } 
+        if (this.props.errors.genre) {
+            genreError = this.props.errors.genre;
+        } 
+        if (this.props.errors.price) {
+            priceError = this.props.errors.price;
+        } 
+        if (this.props.errors.description) {
+            descriptionError = this.props.errors.description;
+        } 
+
         return(
         <div className="form-background">
             <div className="album-form-container" >
@@ -145,21 +159,25 @@ class AlbumForm extends React.Component{
                             </div>
                         <div className="album-input">
                             <label htmlFor="title">Album Title</label>
+                                <span className="form-error-t">{titleError}</span>
                             <input id="title" type="text" value={this.state.title} onChange={this.update('title')} />
                         </div>
                         <br />
                             <div className="album-input">
                                 <label htmlFor="genre">Genre</label>
+                                <span className="form-error-g">{genreError}</span>
                                 <input id="genre" type="text" value={this.state.genre} onChange={this.update('genre')} />
                             </div>
                         <br />
                         <div className="album-input">
                             <label htmlFor="price">Price</label>
+                                <span className="form-error-p">{priceError}</span>
                             <input id="price" type="text" value={this.state.price} onChange={this.update('price')} />
                         </div>
                         <br />
                             <div className="album-input">
                                 <label className="description-input" htmlFor="description">Description</label>
+                                <span className="form-error-d">{descriptionError}</span>
                                 <input id="description" type="text" value={this.state.description} onChange={this.update('description')} />
                             </div>
                         <br />

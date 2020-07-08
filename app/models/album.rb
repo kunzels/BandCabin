@@ -25,12 +25,8 @@ class Album < ApplicationRecord
   end
 
   def ensure_attributes
-    errors.add(:title, 'Title cannot be blank') if !self.title
-    errors.add(:price, 'Price cannot be blank') if !self.price
     price = self.price.to_i
-    errors.add(:price, 'Price must be a positive number') if price <= 0 unless price === 0
-    errors.add(:genre, 'Genre cannot be blank') if !self.genre
-    errors.add(:description, 'Description cannot be blank') if !self.description
+    errors.add(:price, 'must be a positive number') if price <= 0 && self.price
   end
 
 end

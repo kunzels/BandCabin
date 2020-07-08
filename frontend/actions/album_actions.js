@@ -20,8 +20,6 @@ export const receiveNewAlbum = (payload) => ({
 });
 
 export const receiveErrors = errors => {
-    debugger
-
     return {type: RECEIVE_ALBUM_ERRORS,
     errors}
 };
@@ -39,8 +37,8 @@ export const fetchAlbum = id => dispatch => (
 export const createAlbum = (data, userId) => dispatch => (
     APIUtil.createAlbum(data, userId)
         .then(payload => (dispatch(receiveAlbum(payload))
-        ), err => (
-                dispatch(receiveErrors(err.responseJSON))
-            )
+        ), err => {
+                return dispatch(receiveErrors(err.responseJSON))
+            }
         )
 )
