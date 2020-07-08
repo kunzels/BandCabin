@@ -9,21 +9,22 @@
 .album-show-left{
     width: 100%;
     margin-right: 180px;
+    min-width: 300px;
+    max-width: 300px;
 }
 
 .album-show-title{
     width: 100%;
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
     
 }
 
 .album-show-artist{
     font-size: 13px;
 }
-.album-show-right{
 
-}
 .album-show-profile{
     width: 150px;
     height: 100px;

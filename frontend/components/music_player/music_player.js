@@ -14,6 +14,7 @@ class MusicPlayer extends React.Component {
     this.play = this.play.bind(this);
     this.pause = this.pause.bind(this);
     this.setCursorPosition = this.setCursorPosition.bind(this);
+    this.changeCursorPosition = this.changeCursorPosition.bind(this);
 
   }
 
@@ -29,19 +30,33 @@ class MusicPlayer extends React.Component {
   }
 
   setCursorPosition() { 
-    if (this.state.playing) {
-        let player = document.getElementById('musicplayer');
-        let pos = Math.round(player.currentTime / player.duration * 1000);
-        this.setState({
-            cursorPosition: pos
-        })
+        if (this.state.playing) {
+            let player = document.getElementById('musicplayer');
+            let pos = Math.round(player.currentTime / player.duration * 1000);
+            this.setState({
+                cursorPosition: pos
+            })
+        }
     }
-}
+
+    changeCursorPosition(e){
+      debugger;
+      let player = document.getElementById('musicplayer');
+      if(!player || !player.currentTime) return;
+      let duration = player.duration;
+      let pos = e.target.value;
+      debugger;
+      let currentTime = duration * (pos / 1000);
+      this.setState({cursorPosition: pos}, () => {
+        player.currentTime = currentTime;
+      });
+
+  }
 
     playTrack(e) {
-        let player = document.getElementById('musicplayer');
-    let currentTrack = this.props.tracks[e.target.id];
-    this.setState({currentTrack, playing: true, cursorPosition: 0}, () => {
+      let player = document.getElementById('musicplayer');
+      let currentTrack = this.props.tracks[e.target.id];
+      this.setState({currentTrack, playing: true, cursorPosition: 0}, () => {
       player.src = currentTrack.trackUrl;
       player.play();
     })
@@ -83,8 +98,8 @@ class MusicPlayer extends React.Component {
                 max="1000"
                 step="1"
                 value={this.state.cursorPosition}
-                onInput={this.changeCursorPosition}
-                onChange={this.changeCursorPosition}
+                onInput={e => this.changeCursorPosition(e)}
+                onChange={e => this.changeCursorPosition(e)}
               />
         </div>
         </div>
