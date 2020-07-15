@@ -144,7 +144,8 @@ class AlbumForm extends React.Component{
                             </div>
                         </div>
                         <div className="left-side-bottom">
-                            <div className="list-text">Track List</div>
+                            <div className="list-text">Add Tracks Below</div>
+                    
                             <input className="choose-file" type="file" onChange={this.handleAudioFile} />
                             {trackTitle}
                             <ul className="added-tracks">
