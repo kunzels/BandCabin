@@ -146,7 +146,7 @@ class AlbumForm extends React.Component{
                         <div className="left-side-bottom">
                             <div className="list-text">Add Tracks Below</div>
                     
-                            <input className="choose-file" type="file" onChange={this.handleAudioFile} />
+                            <input className="choose-file" type="file" accept=".mp3, .wav, .flac" onChange={this.handleAudioFile} />
                             {trackTitle}
                             <ul className="added-tracks">
                                 {addedTracks}
@@ -156,7 +156,7 @@ class AlbumForm extends React.Component{
                     <div className="right-side-album-input">
                         <div className="album-art-text">Choose Album Art</div>
                             <div className="image-input">
-                                <input type="file" onChange={this.handleFile} />
+                                <input type="file" accept=".jpg, .jpeg, .png" onChange={this.handleFile} />
                             </div>
                         <div className="album-input">
                             <label htmlFor="title">Album Title</label>
