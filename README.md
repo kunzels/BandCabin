@@ -19,21 +19,21 @@ Bandcabin is a fullstack learning project, a bandcamp clone, and a work in progr
   * Rails
   * PostgreSQL
 
-## Current Features
+## User Authorization
+Bandcabin has custom user authentication with a persistent user state.  Through cookies, users remain logged in, while their email is saved in the backend.  The model ensures uniqueness, and the passwords are hashed using BCrypt.  Various validations are performed to ensure vailidity.
 
-* User authorization and login utilizing Bcrypt.
-* Image seeds link to S3 AWS services, default image provided for new signups / albums.
-* User show page displaying albums and an ability to create new albums.
-* Newly created albums populate in User discography.
-* Album show page associated to user displaying album art and user profile picture.
+### AWS S3:
 
+Using Amazon Web Services S3 load time is minimized and storage space is not a concern. The Rails credentials are integrated with the AWS credentials, allowing the app to access AWS. The bucket policy permissions then allow the storage of data in S3.
 
-### Future Improvements
+### Albums:
 
-  * Add tracks to DB and ability to play music
-  * Add image uploading, and banner images
-  * Add followers and following
-  * Add tags
-  * Add addional splash page features( New albums, featured artists etc.)
-  * Ability to purchase
-  * CSS improvements
+Every album has information neccesary for its creation
+* Title 
+* Description
+* Genre
+* Price
+
+Default images are chosen if a user does not select an image, and restrictions are put in place to ensure only song files (wav, mp3 etc) get uploaded as tracks, and only image files (jpg, jpeg, png etc) are allowed as album art.
+
+Tracks are able to be played on the album page, with quick loading times and high quality sound.  
