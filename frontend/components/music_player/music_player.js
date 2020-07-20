@@ -33,15 +33,14 @@ class MusicPlayer extends React.Component {
 
   setCursorPosition() { 
     let test = function display(seconds) {
-      const format = val => `0${Math.floor(val)}`.slice(-2)
-      const minutes = (seconds % 3600) / 60
+      const format = val => `0${Math.floor(val)}`.slice(-2);
+      const minutes = (seconds % 3600) / 60;
 
-      return [minutes, seconds % 60].map(format).join(':')
+      return [minutes, seconds % 60].map(format).join(':');
     }
         if (this.state.playing) {
             let player = document.getElementById('musicplayer');
             if(player.duration) {
-            // console.log(`${player.duration}`, `${player.currentTime}`)
             let pos = Math.round(player.currentTime / player.duration * 1000);
             this.setState({
                 cursorPosition: pos,
@@ -115,7 +114,7 @@ class MusicPlayer extends React.Component {
                 onChange={e => this.changeCursorPosition(e)}
               />
         </div>
-        </div>
+      </div>
 
     } else{
        currentTrackInfo = <div className="playing-track">
