@@ -28,41 +28,37 @@
 
 .github{
     /* display: flex; */
-    background-image: url("github.png");
-    height: 6px;
-    width: 6px;
+    height: 25px;
+    width: 25px;
     z-index: 10;
     /* margin-left: 140px; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10px;
     margin-left: 10px;
 }
 
 .meetMe{
-    background-image: url("person.png");
-    height: 10px;
-    width: 12px;
+    // background-image: url("person.png");
+    height: 32px;
+    width: 32px;
     z-index: 10;
     /* margin-left: 140px; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 20px;
-    margin-top: -2px;
-    padding: 10px;
+    margin-top: -3px;
 }
 
 .linked{
-    background-image: url("link.png");
-    height: 5px;
-    width: 6px;
+    // background-image: url("link.png");
+    height: 25px;
+    width: 25px;
     z-index: 10;
     /* margin-left: 140px; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 20px;
-    padding: 10px;
 }
