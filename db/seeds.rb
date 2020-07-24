@@ -12,9 +12,11 @@ User.destroy_all
 
 gizzard = User.create!({username: 'King Gizzard', artist: 'King Gizzard and the Lizard Wizard', email:'gizz@gmail.com', password:'demoguy5000', location:"Austrailia", description:"King Gizzard & the Lizard Wizard is an Australian rock band formed in 2010 in Melbourne, Victoria. The band consists of Stu Mackenzie (vocals, guitar, bass, keyboards, flute), Ambrose Kenny-Smith (vocals, harmonica, keyboards), Cook Craig (guitar, bass, vocals), Joey Walker (guitar, bass, keyboards, vocals), Lucas Skinner (bass, keyboards), Michael Cavanagh (drums, percussion), and Eric Moore (drums, percussion, management). They are known for their energetic live shows and prolific recording output, having released two EPs, fifteen studio albums, and four live albums since their formation.", genre:"Prog Rock"})
 manman = User.create!({username: 'ManMan', artist: 'ManMan', email:'manman@gmail.com', password:'demoguy5001', location:"Philidalphia", description:'Man Man is an experimental rock band from Philadelphia and now based in Los Angeles. Their multi-instrumental style is centered on the piano playing of lead singer, songwriter, and lyricist Honus Honus (Ryan Kattner).', genre:"Experimental Rock"})
+weatherbox = User.create!({username: 'Weatherbox', artist: 'Weatherbox', email:'weatherbox@gmail.com', password:'demoguy5002', location:"California", description:'Weatherbox is an American indie rock band from San Diego, California, United States, led by singer/songwriter Brian Warren and currently composed of Warren and varied touring members.', genre:"Math Rock"})
 
 gizzard.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/Gizz.png"), filename: "jason.jpg")
 manman.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/ManMan/manman.jpg"), filename: "jason.jpg")
+weatherbox.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/weatherbox.jpeg"), filename: "jason.jpg")
 
 poly = Album.create(title: "Polygondwanaland", user_id: gizzard.id, price: 10, description: "Polygondwanaland is the twelfth studio album by Australian psychedelic rock band King Gizzard & the Lizard Wizard. The album was released under an open source licence. The band uploaded the master tapes online for anyone to use. It was released on 17 November 2017. It was the fourth of five albums released by the band in 2017.", genre: "Prog Rock")
 poly.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/poly.jpg"), filename: "jason.jpg")
@@ -27,6 +29,22 @@ motu.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/motu.jpg"),
 
 dream = Album.create(title: "Dream Hunting", user_id: manman.id, price: 10, description:'Dream Hunting in the Valley of the In-Between is the sixth studio album by American band Man Man. It was released on May 1, 2020 under Sub Pop.', genre: "Experimental Rock")
 dream.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/ManMan/dream.jpg"), filename: "jason.jpg")
+
+flies = Album.create(title: "Flies In All Directions", user_id: weatherbox.id, price: 10, description:'Dream Hunting in the Valley of the In-Between is the sixth studio album by American band Man Man. It was released on May 1, 2020 under Sub Pop.', genre: "Experimental Rock")
+flies.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/flies.jpg"), filename: "jason.jpg")
+
+flies1 = Track.create(title: "Pagan Baby", album_id: flies.id)
+flies1.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/Pagan+Baby.mp3"), filename: "Pagan Baby.mp3")
+flies2 = Track.create(title: "Bring Us The Head Of Weatherbox", album_id: flies.id)
+flies2.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/Bring+Us+the+Head+of+Weatherbox.mp3"), filename: "Bring Us The Head Of Weatherbox.mp3")
+flies3 = Track.create(title: "The Fresh Prints Of Bill Ayers", album_id: flies.id)
+flies3.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/The+Fresh+Prints+of+Bill+Ayers.mp3"), filename: "The Fresh Prints Of Bill Ayers.mp3")
+flies4 = Track.create(title: "Bathin' In The Fuss", album_id: flies.id)
+flies4.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/Bathin'+in+the+Fuss.mp3"), filename: "Bathin' In The Fuss.mp3")
+flies5 = Track.create(title: "Radio Hive", album_id: flies.id)
+flies5.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/Radio+Hive.mp3"), filename: "Radio Hive.mp3")
+flies6 = Track.create(title: "The Devil And Whom?", album_id: flies.id)
+flies6.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/The+Devil+and+Whom_.mp3"), filename: "The Devil And Whom_.mp3")
 
 dream1 = Track.create(title: "Dreamers", album_id: dream.id)
 dream1.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/ManMan/dreamers.mp3"), filename: "dreamers.mp3")
