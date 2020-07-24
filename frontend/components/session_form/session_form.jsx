@@ -55,23 +55,23 @@ class SessionForm extends React.Component {
                 
                     <div className = "login-input">
                         <div className= "input">
-                            <label htmlFor="username">Username:</label>
-                            <input id="username" type="text" value={this.state.username} onChange={this.update('username')}/>
+                            <label htmlFor="username" className="userNameTitle">Username</label>
+                            <input id="username" type="text" className="userNameInput" value={this.state.username} onChange={this.update('username')}/>
                         </div>
                     <br/>
                         <div className="input">
-                            <label className="email-input" htmlFor="email">Email:</label>
-                            <input id="email" type="text" value={this.state.email} onChange={this.update('email')} />
+                            <label className="email-input" htmlFor="email">Email</label>
+                            <input id="email" type="text" className="userNameInput" value={this.state.email} onChange={this.update('email')} />
                         </div>
                     <br/>
                         <div className="input">
-                            <label htmlFor="artist">Artist / Band Name:</label>
-                            <input id="artist" type="text" value={this.state.artist} onChange={this.update('artist')} />
+                            <label htmlFor="artist" className="artistTitle">Artist / Band Name</label>
+                            <input id="artist" className="userNameInput" type="text" value={this.state.artist} onChange={this.update('artist')} />
                         </div>
                     <br/>
                         <div className= "input">
-                            <label htmlFor="password">Password:</label>
-                            <input id="password" type="password" value={this.state.password} onChange={this.update('password')} />
+                            <label htmlFor="password" className="passwordTitle">Password</label>
+                            <input id="password" className="userNameInput" type="password" value={this.state.password} onChange={this.update('password')} />
                         </div>
                     <br/>
                         <input className="form-submit-button" type="submit" value={this.props.formType} />
@@ -91,13 +91,13 @@ class SessionForm extends React.Component {
                           {this.renderErrors()}
                         <div className="login-input">
                             <div className="input">
-                                <label htmlFor="username">Username:</label>
-                                <input id="username" type="text" value={this.state.username} onChange={this.update('username')} />
+                                <label htmlFor="username" className="userNameTitle">Username</label>
+                                <input id="username" className="userNameInput" type="text" value={this.state.username} onChange={this.update('username')} />
                             </div>
                             <br />
                             <div className="input">
-                                <label htmlFor="password">Password:</label>
-                                <input id="password" type="password" value={this.state.password} onChange={this.update('password')} />
+                                <label htmlFor="password" className="userNameTitle">Password</label>
+                                <input id="password" type="password" className="userNameInput"  value={this.state.password} onChange={this.update('password')} />
                             </div>
                             <br />
                             <input className="form-submit-button" type="submit" value={this.props.formType} />
