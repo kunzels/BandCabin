@@ -6,9 +6,9 @@ const HomePage = () => {
         <div className="homepage">
             <div className="item-container">
                 <div className="big-item">
-                    {/* <a href="http://localhost:3000/#/albums/316"> */}
+                        <a href="https://bandcabin.herokuapp.com/#/albums/73">
                     <img className="weatherbox" src={window.weatherbox} />
-                        {/* </a> */}
+                        </a>
                    {/* <p className="BI-Description">Weatherbox Return, With a New Halfway Home Live Session</p> */}
                 </div>
                 <div className="small-items">
