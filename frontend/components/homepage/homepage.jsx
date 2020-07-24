@@ -6,7 +6,9 @@ const HomePage = () => {
         <div className="homepage">
             <div className="item-container">
                 <div className="big-item">
+                    {/* <a href="http://localhost:3000/#/albums/316"> */}
                     <img className="weatherbox" src={window.weatherbox} />
+                        {/* </a> */}
                    {/* <p className="BI-Description">Weatherbox Return, With a New Halfway Home Live Session</p> */}
                 </div>
                 <div className="small-items">

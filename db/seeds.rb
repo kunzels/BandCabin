@@ -30,7 +30,7 @@ motu.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/motu.jpg"),
 dream = Album.create(title: "Dream Hunting", user_id: manman.id, price: 10, description:'Dream Hunting in the Valley of the In-Between is the sixth studio album by American band Man Man. It was released on May 1, 2020 under Sub Pop.', genre: "Experimental Rock")
 dream.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/ManMan/dream.jpg"), filename: "jason.jpg")
 
-flies = Album.create(title: "Flies In All Directions", user_id: weatherbox.id, price: 10, description:'Dream Hunting in the Valley of the In-Between is the sixth studio album by American band Man Man. It was released on May 1, 2020 under Sub Pop.', genre: "Experimental Rock")
+flies = Album.create(title: "Flies In All Directions", user_id: weatherbox.id, price: 10, description:"Weatherbox returns with a quite bit of snark and cheekiness that makes Flies In All Directions that much more interesting to absorb. It's packed with the typical start-stop riffs, distorted guitar bends and angular hooks that make a Weatherbox album but a lot of the tracks take time to roam out of the sandbox.", genre: "Experimental Rock")
 flies.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/flies.jpg"), filename: "jason.jpg")
 
 flies1 = Track.create(title: "Pagan Baby", album_id: flies.id)
@@ -45,6 +45,12 @@ flies5 = Track.create(title: "Radio Hive", album_id: flies.id)
 flies5.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/Radio+Hive.mp3"), filename: "Radio Hive.mp3")
 flies6 = Track.create(title: "The Devil And Whom?", album_id: flies.id)
 flies6.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/The+Devil+and+Whom_.mp3"), filename: "The Devil And Whom_.mp3")
+flies7 = Track.create(title: "Dark All Night For Us", album_id: flies.id)
+flies7.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/Dark+All+Night+for+Us.mp3"), filename: "Dark All Night For Us.mp3")
+flies8 = Track.create(title: "Drag Out", album_id: flies.id)
+flies8.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/Drag+Out.mp3"), filename: "Drag Out.mp3")
+flies9 = Track.create(title: "The Drones", album_id: flies.id)
+flies9.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/The+Drones.mp3"), filename: "The Drones.mp3")
 
 dream1 = Track.create(title: "Dreamers", album_id: dream.id)
 dream1.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/ManMan/dreamers.mp3"), filename: "dreamers.mp3")
