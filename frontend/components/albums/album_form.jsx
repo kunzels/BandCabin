@@ -139,10 +139,15 @@ class AlbumForm extends React.Component{
                         <div className="left-side-top">
                             <div className="square">{imagePreview}</div>
                             <div className="album-preview">
-                                <div>{this.state.title || "Untitled Album"}</div>
+                                <div className="album-title-preview"> {this.state.title || "Untitled Album"}</div>
                                 <div>by {this.props.currentUser.artist}</div>
+                                    <div className="album-art-text">Choose Album Art</div>
+                                    <div className="image-input">
+                                        <input type="file" accept=".jpg, .jpeg, .png" onChange={this.handleFile} />
+                                    </div>
                             </div>
                         </div>
+                        
                         <div className="left-side-bottom">
                             <div className="list-text">Add Tracks Below</div>
                     
@@ -154,35 +159,31 @@ class AlbumForm extends React.Component{
                         </div>
                     </div>
                     <div className="right-side-album-input">
-                        <div className="album-art-text">Choose Album Art</div>
-                            <div className="image-input">
-                                <input type="file" accept=".jpg, .jpeg, .png" onChange={this.handleFile} />
-                            </div>
                         <div className="album-input">
-                            <label htmlFor="title">Album Title</label>
-                                <span className="form-error-t">{titleError}</span>
-                            <input id="title" type="text" value={this.state.title} onChange={this.update('title')} />
+                            <label htmlFor="title"></label>
+                            <div className="form-error-t">{titleError}</div>
+                                <input id="title" type="text" value={this.state.title} className="album-form-text-input" placeholder="Album Title" onChange={this.update('title')} />
                         </div>
                         <br />
                             <div className="album-input">
-                                <label htmlFor="genre">Genre</label>
-                                <span className="form-error-g">{genreError}</span>
-                                <input id="genre" type="text" value={this.state.genre} onChange={this.update('genre')} />
+                                <label htmlFor="genre"></label>
+                                <div className="form-error-g">{genreError}</div>
+                                <input id="genre" type="text" value={this.state.genre} className="album-form-text-input" placeholder="Genre" onChange={this.update('genre')} />
                             </div>
                         <br />
                         <div className="album-input">
-                            <label htmlFor="price">Price</label>
-                                <span className="form-error-p">{priceError}</span>
-                            <input id="price" type="text" value={this.state.price} onChange={this.update('price')} />
+                            <label htmlFor="price"></label>
+                                <div className="form-error-p">{priceError}</div>
+                                <input id="price" type="text" value={this.state.price} className="album-form-text-input" placeholder="price" onChange={this.update('price')} />
                         </div>
                         <br />
                             <div className="album-input">
-                                <label className="description-input" htmlFor="description">Description</label>
-                                <span className="form-error-d">{descriptionError}</span>
-                                <input id="description" type="text" value={this.state.description} onChange={this.update('description')} />
+                                <label className="description-input" htmlFor="description"></label>
+                                <div className="form-error-d">{descriptionError}</div>
+                                <textarea id="description" type="text" value={this.state.description} className="album-form-description-input" placeholder="Description" onChange={this.update('description')} />
                             </div>
                         <br />
-                        <input className="form-submit-button" type="submit"/>
+                        <input className="form-submit-button" className="album-submit" type="submit" value="Create Album"/>
                     </div>
                 </form>
             </div>
