@@ -14,7 +14,7 @@ class AlbumForm extends React.Component{
             imageFile: null,
             track_attributes: [],
             audioFile: null,
-            trackTitle: "Track Title"
+            trackTitle: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
@@ -102,7 +102,7 @@ class AlbumForm extends React.Component{
         let trackTitle;
         if(this.state.audioFile){
             trackTitle = <div className="track-title">
-                            <input className="track-text" type="text" value={this.state.trackTitle} onChange={this.updateTrackTitle}/>
+                            <input className="track-text" placeholder="Track Title" type="text" value={this.state.trackTitle} onChange={this.updateTrackTitle}/>
                             <button onClick={this.addTrack}>Add Track</button>
                         </div>
 
