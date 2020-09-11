@@ -174,7 +174,7 @@ class AlbumForm extends React.Component{
                         <div className="album-input">
                             <label htmlFor="price"></label>
                                 <div className="form-error-p">{priceError}</div>
-                                <input id="price" type="text" value={this.state.price} className="album-form-text-input" placeholder="price" onChange={this.update('price')} />
+                                <input id="price" type="text" value={this.state.price} className="album-form-text-input" placeholder="Price" onChange={this.update('price')} />
                         </div>
                         <br />
                             <div className="album-input">
