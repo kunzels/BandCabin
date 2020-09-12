@@ -159,6 +159,7 @@ class AlbumForm extends React.Component{
                         </div>
                     </div>
                     <div className="right-side-album-input">
+                        <div className="album-input-header">Album Information</div>
                         <div className="album-input">
                             <label htmlFor="title"></label>
                             <div className="form-error-t">{titleError}</div>

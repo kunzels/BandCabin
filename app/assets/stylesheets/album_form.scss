@@ -14,8 +14,11 @@
     background-color: white;
     height: 600px;
     margin-top: 50px;
-    
-    
+}
+
+.album-input-header{
+    font-family: 'Roboto',arial,sans-serif;
+    text-align: center;
 }
 
 .left-side-album-create{
@@ -184,15 +187,16 @@
     margin-bottom: 10px;
     font-family: 'Roboto',arial,sans-serif;
     text-transform: capitalize;
-    background-color:#feb754;
+    background-color:#3184ca;
     font-size: 20px;
     font-weight: bold;
     color: white;
      box-shadow: 0 3px 5px rgba(0,0,0,0.20);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .album-submit:hover{
-    background-color: #ffd69e;
+    background-color: #7abcf1;
     cursor: pointer;
 }

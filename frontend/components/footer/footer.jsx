@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return(
     <div className="footer">
+        
+        <div className="footer-top-1"></div>
         <div className="footer-top">
             <div className="footer-names">
                     <a className="footer-links" href="https://github.com/kunzels">
@@ -23,6 +25,7 @@ const Footer = () => {
                     </a>
             </div>
         </div>
+        <div className="footer-bottom-2"></div>
         <div className="footer-bottom"></div>
     </div>
     );
