@@ -66,3 +66,85 @@
     font-family: Arial, Helvetica, sans-serif;
     height: 100px;
 }
+
+
+.homepage-wrapper{
+    margin-left: 210px;
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+
+.album-display-filter{
+    display: flex;
+    background-color:#67a9e2;
+    width: 100%;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.homepage-profile-picture{
+    width: 172px;
+    height: 175px;
+    border-color: black;
+    border: black;
+    object-fit: cover;
+}
+
+.homepage-album-artist{
+        font-size: 12px;
+        color: rgb(83, 83, 83);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 172px;
+        
+}
+
+.homepage-filters-all{
+    font: 15px/1.2307692308 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    margin-left: 210px;
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 60px;
+    background-color: #444444;
+    width: 28px;
+    text-align: center;
+    line-height: 1px;
+    line-height: 18px;
+    height: 50%;
+    margin-top: 9px;
+}
+
+.homepage-filters-all:hover{
+    cursor: pointer;
+    background-color: #6d6d6d;
+    border: 1px solid #6d6d6d;
+}
+
+.homepage-filters{
+    font: 15px/1.2307692308 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    margin-left: 10px;
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 60px;
+    background-color: #444444;
+    width: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    line-height: 1px;
+    line-height: 18px;
+    height: 50%;
+    margin-top: 9px;
+}
+
+.homepage-filters:hover{
+    cursor: pointer;
+    background-color: #6d6d6d;
+    border: 1px solid #6d6d6d;
+}
