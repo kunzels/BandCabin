@@ -200,3 +200,52 @@
     background-color: #7abcf1;
     cursor: pointer;
 }
+
+.searchedGenres{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 320px;
+    margin-top: -28px;
+    position: absolute;
+    overflow-y:auto;
+    max-height: 100px;
+}
+
+.genres-item{
+    background-color: white;
+    margin-top: 10px;
+}
+
+.nothing{
+    display: none;
+}
+
+.selectedTags{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    margin-left: 20px;
+    color: white;
+    height: 20px;
+    max-width: 470px;
+    width: 470px;
+    height: 60px;
+    flex-wrap: wrap;
+}
+
+.selected-tag-item{
+    margin-left: 5px;
+    font: 12px/1.2307692308 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 60px;
+    background-color: #444444;
+    width: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    line-height: 20px;
+    height: 20px;
+    margin-top: 9px;
+}

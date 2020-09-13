@@ -14,7 +14,9 @@ class AlbumForm extends React.Component{
             imageFile: null,
             track_attributes: [],
             audioFile: null,
-            trackTitle: ""
+            trackTitle: "",
+            tags: [],
+            searchText: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
@@ -22,6 +24,7 @@ class AlbumForm extends React.Component{
         this.handleAudioFile = this.handleAudioFile.bind(this);
         this.updateTrackTitle = this.updateTrackTitle.bind(this);
         this.addTrack = this.addTrack.bind(this);
+        this.addItem = this.addItem.bind(this);
     }
 
     update(field) {
@@ -92,6 +95,16 @@ class AlbumForm extends React.Component{
             audioFile: null
         });
     }
+
+    addItem(e){
+        let newTags = this.state.tags
+        if(newTags.includes(e.currentTarget.textContent)){
+        }else{
+        newTags.push(e.currentTarget.textContent)
+        }
+        this.setState({ tags: newTags, searchText: ""})
+        debugger;
+    }
   
     render(){
 
@@ -130,6 +143,30 @@ class AlbumForm extends React.Component{
             descriptionError = this.props.errors.description;
         } 
 
+
+        let searchText = this.state.searchText;
+        const genres = ["electronic", "rock", "metal", "alternative","hip-hop/rap","experimental","punk","folk","pop","ambient","soundtrack","world","jazz","acoustic","funk","r&b/soul","devotional","classical","reggae","podcasts","country","spokenword","comedy","blues","kids","audiobooks","latin"];
+        let taggings;
+        taggings = genres.map(item => {
+            if(item.includes(searchText.toLowerCase()) && searchText !== ""){
+                return <div className="genres-item" onClick={this.addItem}>{item.charAt(0).toUpperCase() + item.slice(1)}</div>
+            }
+        })
+
+        let searching;
+        if(searchText === ""){
+            searching = <div className="nothing"></div>
+        } else {
+            searching = <div className="searchedGenres">
+                {taggings}
+            </div>
+        }
+
+        let selectedTags;
+        selectedTags = this.state.tags.map(item => {
+           return <div className="selected-tag-item">{item}</div>
+        })
+
         return(
         <div className="form-background">
             <div className="album-form-container" >
@@ -147,6 +184,9 @@ class AlbumForm extends React.Component{
                                     </div>
                             </div>
                         </div>
+                                <div className="selectedTags">
+                                    {selectedTags}
+                                </div>
                         
                         <div className="left-side-bottom">
                             <div className="list-text">Add Tracks Below</div>
@@ -184,6 +224,13 @@ class AlbumForm extends React.Component{
                                 <textarea id="description" type="text" value={this.state.description} className="album-form-description-input" placeholder="Description" onChange={this.update('description')} />
                             </div>
                         <br />
+                            <div className="album-input">
+                                <label htmlFor="tags"></label>
+                                <div className="form-error-g">{genreError}</div>
+                                <input id="tags" type="text" value={this.state.searchText} className="album-form-text-input" placeholder="Genre" onChange={this.update('searchText')}/>
+                            </div>
+                            <br />
+                            {searching}
                         <input className="form-submit-button" className="album-submit" type="submit" value="Create Album"/>
                     </div>
                 </form>
