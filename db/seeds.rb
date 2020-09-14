@@ -13,10 +13,12 @@ User.destroy_all
 gizzard = User.create!({username: 'King Gizzard', artist: 'King Gizzard and the Lizard Wizard', email:'gizz@gmail.com', password:'demoguy5000', location:"Austrailia", description:"King Gizzard & the Lizard Wizard is an Australian rock band formed in 2010 in Melbourne, Victoria. The band consists of Stu Mackenzie (vocals, guitar, bass, keyboards, flute), Ambrose Kenny-Smith (vocals, harmonica, keyboards), Cook Craig (guitar, bass, vocals), Joey Walker (guitar, bass, keyboards, vocals), Lucas Skinner (bass, keyboards), Michael Cavanagh (drums, percussion), and Eric Moore (drums, percussion, management). They are known for their energetic live shows and prolific recording output, having released two EPs, fifteen studio albums, and four live albums since their formation.", genre:"Prog Rock"})
 manman = User.create!({username: 'ManMan', artist: 'ManMan', email:'manman@gmail.com', password:'demoguy5001', location:"Philidalphia", description:'Man Man is an experimental rock band from Philadelphia and now based in Los Angeles. Their multi-instrumental style is centered on the piano playing of lead singer, songwriter, and lyricist Honus Honus (Ryan Kattner).', genre:"Experimental Rock"})
 weatherbox = User.create!({username: 'Weatherbox', artist: 'Weatherbox', email:'weatherbox@gmail.com', password:'demoguy5002', location:"California", description:'Weatherbox is an American indie rock band from San Diego, California, United States, led by singer/songwriter Brian Warren and currently composed of Warren and varied touring members.', genre:"Math Rock"})
+seedUser1 = User.create!({username: 'seedUser1', artist: 'The Bibblers', email:'seedUser1@gmail.com', password:'seedguy101', location:"Seedsville", description:'We are a band that really loves Seeds.  There are alot of bands pretending they are the seed band, but we are the real one.', genre:"Seed Band"})
 
 gizzard.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/Gizz.png"), filename: "jason.jpg")
 manman.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/ManMan/manman.jpg"), filename: "jason.jpg")
 weatherbox.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/weatherbox.jpeg"), filename: "jason.jpg")
+seedUser1.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/seedVolta.jpeg"), filename: "jason.jpg")
 
 poly = Album.create(title: "Polygondwanaland", user_id: gizzard.id, price: 10, description: "Polygondwanaland is the twelfth studio album by Australian psychedelic rock band King Gizzard & the Lizard Wizard. The album was released under an open source licence. The band uploaded the master tapes online for anyone to use. It was released on 17 November 2017. It was the fourth of five albums released by the band in 2017.", genre: "Rock,Metal,Experimental,")
 poly.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/poly.jpg"), filename: "jason.jpg")
@@ -32,6 +34,12 @@ dream.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/ManMan/dre
 
 flies = Album.create(title: "Flies In All Directions", user_id: weatherbox.id, price: 10, description:"Weatherbox returns with a quite bit of snark and cheekiness that makes Flies In All Directions that much more interesting to absorb. It's packed with the typical start-stop riffs, distorted guitar bends and angular hooks that make a Weatherbox album but a lot of the tracks take time to roam out of the sandbox.", genre: "Punk,Rock,Alternative,")
 flies.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/flies.jpg"), filename: "jason.jpg")
+
+seedAlbum1 = Album.create(title: "Seed Album", user_id: seedUser1.id, price: 10, description:"This is our bands seed. Many others pretend to be us but we are the original.", genre: "Jazz,Rock,Alternative,Acoustic")
+seedAlbum1.photo.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/seedAlbum.jpg"), filename: "jason.jpg")
+
+seedTrack1 = Track.create(title: "Some albums need only one seed.", album_id: seedAlbum1.id)
+seedTrack1.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/jingle.mp3"), filename: "jingle.mp3")
 
 flies1 = Track.create(title: "Pagan Baby", album_id: flies.id)
 flies1.audio_file.attach(io: open("https://bandcabin-seeds.s3.amazonaws.com/weatherbox/Pagan+Baby.mp3"), filename: "Pagan Baby.mp3")
