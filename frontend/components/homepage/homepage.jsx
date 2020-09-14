@@ -30,7 +30,8 @@ class Homepage extends React.Component {
     }
 
     handleNext(){
-        if(this.state.second + 4 <= this.state.albums.length){
+        let filteredAlbums = this.filteredAlbums();
+        if(this.state.second + 4 <= filteredAlbums.length){
             this.setState({first: this.state.first += 4})
             this.setState({second: this.state.second += 4})
         }
@@ -146,7 +147,7 @@ class Homepage extends React.Component {
             </div>
             <div className="homepage-album-navigation">
                 <div onClick={this.handlePrevious}>Previous</div>
-                <div className="next" onClick={this.handleNext}>Next</div>
+                <div className="next" value="test" onClick={this.handleNext}>Next</div>
             </div>
         </div>
     </div>
