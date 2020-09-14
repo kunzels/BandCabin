@@ -56,7 +56,7 @@ class Homepage extends React.Component {
     albumTitles(filteredAlbums){
         let albumTitles;
         if (filteredAlbums.length === 0) {
-            albumTitles = <div>We could use more seeds, though I assure you this works</div>
+            albumTitles = <div className="noSeeds">We could use more seeds, but I assure you this works...</div>
         } else {
             albumTitles = filteredAlbums.slice(this.state.first, this.state.second).map(album => {
                 if (this.state.selected === "All" || album.genre.includes(this.state.selected.charAt(0).toUpperCase() + this.state.selected.slice(1))) {
