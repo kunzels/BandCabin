@@ -31,8 +31,8 @@ class Homepage extends React.Component {
 
     handleNext(){
         if(this.state.second + 4 <= this.state.albums.length){
-        this.setState({first: this.state.first += 4})
-        this.setState({second: this.state.second += 4})
+            this.setState({first: this.state.first += 4})
+            this.setState({second: this.state.second += 4})
         }
     }
 
@@ -45,10 +45,13 @@ class Homepage extends React.Component {
 
     filteredAlbums(){
         let filteredAlbums;
-        if (this.state.selected !== "All") {
+        if(this.state.selected === "Recent"){
+            filteredAlbums = this.state.albums.slice().reverse()
+        }
+        else if (this.state.selected !== "All") {
             filteredAlbums = this.state.albums.filter(album => album.genre.includes(this.state.selected.charAt(0).toUpperCase() + this.state.selected.slice(1)));
         } else {
-            filteredAlbums = this.state.albums;
+            filteredAlbums = this.state.albums
         }
         return filteredAlbums
     }
@@ -59,11 +62,13 @@ class Homepage extends React.Component {
             albumTitles = <div className="noSeeds">We could use more seeds, but I assure you this works...</div>
         } else {
             albumTitles = filteredAlbums.slice(this.state.first, this.state.second).map(album => {
-                if (this.state.selected === "All" || album.genre.includes(this.state.selected.charAt(0).toUpperCase() + this.state.selected.slice(1))) {
+                if (this.state.selected === "All" || this.state.selected ==="Recent" || album.genre.includes(this.state.selected.charAt(0).toUpperCase() + this.state.selected.slice(1))) {
                     return <div key={album.id}>
                         <Link to={`/albums/${album.id}`} className="album-link">
                             <img className="homepage-profile-picture" src={album.photoURL} alt="profile-picture" />
                             <div className="homepage-album-title">{album.title}</div>
+                        </Link>
+                        <Link to={`/users/${album.user_id}`} className="album-link">
                             <div className="homepage-album-artist">{album.artistName}</div>
                         </Link>
                     </div>
@@ -77,7 +82,7 @@ class Homepage extends React.Component {
         let genreButtons;
         // let genreTypes = ["electronic", "rock", "metal", "alternative", "hip-hop/rap", "experimental", "punk", "folk", "pop", "ambient", "soundtrack", "world", "jazz", "acoustic", "funk", "r&b/soul", "devotional", "classical", "reggae", "podcasts", "country", "spokenword", "comedy", "blues", "kids", "audiobooks", "latin"]
         // could create carousel for types, someday, someday... ^
-        let genreTypes = ["electronic", "rock", "metal", "alternative", "rap", "experimental", "punk", "folk", "pop", "ambient", "soundtrack", "jazz", "acoustic", "classical", "spokenword"]
+        let genreTypes = ["Recent", "electronic", "rock", "metal", "alternative", "rap", "experimental", "punk", "folk", "pop", "ambient", "soundtrack", "jazz", "acoustic", "classical", "spokenword"]
         genreButtons = genreTypes.map(type => {
             let classSelect;
             if ((this.state.selected.charAt(0).toUpperCase() + this.state.selected.slice(1)) === type.charAt(0).toUpperCase() + type.slice(1)){
@@ -112,16 +117,16 @@ class Homepage extends React.Component {
         <div className="homepage">
             <div className="item-container">
                 <div className="big-item">
-                        <a href="https://bandcabin.herokuapp.com/#/albums/73">
+                        <a href="https://bandcabin.herokuapp.com/#/albums/112">
                     <img className="weatherbox" src={window.weatherbox} />
                         </a>
                    {/* <p className="BI-Description">Weatherbox Return, With a New Halfway Home Live Session</p> */}
                 </div>
                 <div className="small-items">
-                        <a href="https://bandcabin.herokuapp.com/#/albums/68" className="gizzLink">
+                        <a href="https://bandcabin.herokuapp.com/#/albums/107" className="gizzLink">
                     <img className="gizzard" src={window.gizzard} />
                         </a>
-                        <a href="https://bandcabin.herokuapp.com/#/albums/72" className="manManLink">
+                        <a href="https://bandcabin.herokuapp.com/#/albums/111" className="manManLink">
                    <img className="gizzard" src={window.manman} />
                         </a>
                         <a href="https://www.grammy.com/musicares/get-help/musicares-coronavirus-relief" className="manManLink">

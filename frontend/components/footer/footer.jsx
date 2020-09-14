@@ -25,8 +25,11 @@ const Footer = () => {
                     </a>
             </div>
         </div>
-        <div className="footer-bottom-2"></div>
-        <div className="footer-bottom"></div>
+        <div className="footer-bottom-2">
+        </div>
+        <div className="footer-bottom">
+          
+        </div>
     </div>
     );
 }
