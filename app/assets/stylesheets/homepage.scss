@@ -74,8 +74,8 @@
     grid-template-columns: repeat(4, 0fr);
     grid-row-gap: 25px;
     grid-column-gap: 25px;
-    margin-bottom: 100px;
     margin-top: 10px;
+    min-height: 211px;
 }
 
 .album-display-filter{
@@ -147,4 +147,16 @@
     cursor: pointer;
     background-color: #6d6d6d;
     border: 1px solid #6d6d6d;
+}
+
+.homepage-album-navigation{
+    display: flex;
+    flex-direction: row;
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.next{
+    margin-left: 700px;
 }

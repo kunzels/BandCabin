@@ -98,12 +98,13 @@ class AlbumForm extends React.Component{
 
     addItem(e){
         let newTags = this.state.tags
+        let newGenre = this.state.genre + e.currentTarget.textContent + ","
+     
         if(newTags.includes(e.currentTarget.textContent)){
         }else{
         newTags.push(e.currentTarget.textContent)
         }
-        this.setState({ tags: newTags, searchText: ""})
-        debugger;
+        this.setState({ tags: newTags, searchText: "", genre: newGenre})
     }
   
     render(){
@@ -206,12 +207,12 @@ class AlbumForm extends React.Component{
                                 <input id="title" type="text" value={this.state.title} className="album-form-text-input" placeholder="Album Title" onChange={this.update('title')} />
                         </div>
                         <br />
-                            <div className="album-input">
+                            {/* <div className="album-input">
                                 <label htmlFor="genre"></label>
                                 <div className="form-error-g">{genreError}</div>
                                 <input id="genre" type="text" value={this.state.genre} className="album-form-text-input" placeholder="Genre" onChange={this.update('genre')} />
                             </div>
-                        <br />
+                        <br /> */}
                         <div className="album-input">
                             <label htmlFor="price"></label>
                                 <div className="form-error-p">{priceError}</div>

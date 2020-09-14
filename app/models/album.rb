@@ -23,7 +23,7 @@ class Album < ApplicationRecord
       self.photo.attach(io: open("app/assets/images/defuser.png"), filename: "defuser.png")
     end
   end
-
+  
   def ensure_attributes
     price = self.price.to_i
     errors.add(:price, 'must be a positive number') if price <= 0 && self.price
