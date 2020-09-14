@@ -13,6 +13,10 @@ class Homepage extends React.Component {
         this.handleNext = this.handleNext.bind(this);
         this.handlePrevious = this.handlePrevious.bind(this);
         this.updateSelected = this.updateSelected.bind(this);
+        this.filteredAlbums = this.filteredAlbums.bind(this);
+        this.albumTitles = this.albumTitles.bind(this);
+        this.genreButtons = this.genreButtons.bind(this);
+        this.allSelected = this.allSelected.bind(this);
     }
 
     updateSelected(e){
@@ -39,29 +43,70 @@ class Homepage extends React.Component {
         }
     }
 
-    render(){
+    filteredAlbums(){
         let filteredAlbums;
-        if(this.state.selected !== "All"){
+        if (this.state.selected !== "All") {
             filteredAlbums = this.state.albums.filter(album => album.genre.includes(this.state.selected.charAt(0).toUpperCase() + this.state.selected.slice(1)));
-        } else{
+        } else {
             filteredAlbums = this.state.albums;
         }
+        return filteredAlbums
+    }
+
+    albumTitles(filteredAlbums){
         let albumTitles;
-        if(filteredAlbums.length === 0){
+        if (filteredAlbums.length === 0) {
             albumTitles = <div>We could use more seeds, though I assure you this works</div>
-        } else{
+        } else {
             albumTitles = filteredAlbums.slice(this.state.first, this.state.second).map(album => {
-            if (this.state.selected === "All" || album.genre.includes(this.state.selected.charAt(0).toUpperCase() + this.state.selected.slice(1))){
-            return <div key={album.id}>
-                    <Link to={`/albums/${album.id}`} className="album-link">
-                        <img className="homepage-profile-picture" src={album.photoURL} alt="profile-picture" />
-                        <div className="homepage-album-title">{album.title}</div>
-                        <div className="homepage-album-artist">{album.artistName}</div>
+                if (this.state.selected === "All" || album.genre.includes(this.state.selected.charAt(0).toUpperCase() + this.state.selected.slice(1))) {
+                    return <div key={album.id}>
+                        <Link to={`/albums/${album.id}`} className="album-link">
+                            <img className="homepage-profile-picture" src={album.photoURL} alt="profile-picture" />
+                            <div className="homepage-album-title">{album.title}</div>
+                            <div className="homepage-album-artist">{album.artistName}</div>
                         </Link>
                     </div>
-            }
-        })
+                }
+            })
+        }
+        return albumTitles
     }
+
+    genreButtons(){
+        let genreButtons;
+        // let genreTypes = ["electronic", "rock", "metal", "alternative", "hip-hop/rap", "experimental", "punk", "folk", "pop", "ambient", "soundtrack", "world", "jazz", "acoustic", "funk", "r&b/soul", "devotional", "classical", "reggae", "podcasts", "country", "spokenword", "comedy", "blues", "kids", "audiobooks", "latin"]
+        // could create carousel for types, someday, someday... ^
+        let genreTypes = ["electronic", "rock", "metal", "alternative", "rap", "experimental", "punk", "folk", "pop", "ambient", "soundtrack", "jazz", "acoustic", "classical", "spokenword"]
+        genreButtons = genreTypes.map(type => {
+            let classSelect;
+            if ((this.state.selected.charAt(0).toUpperCase() + this.state.selected.slice(1)) === type.charAt(0).toUpperCase() + type.slice(1)){
+                classSelect = "homepage-filters-on"
+            } else {
+                classSelect = "homepage-filters"
+            }
+            return <div className={classSelect} onClick={this.updateSelected}>{type}</div>
+        })
+        return genreButtons
+    }
+
+    allSelected(){
+        let allSelected;
+        if (this.state.selected === "All")
+            allSelected = "homepage-filters-all"
+        else {
+            allSelected = "homepage-filters-all-off"
+        }
+        return allSelected;
+    }
+
+    render(){
+        let filteredAlbums = this.filteredAlbums();
+        let albumTitles = this.albumTitles(filteredAlbums);
+        let genreButtons = this.genreButtons();
+        let filterColor = "album-display-filter-" + this.state.selected;
+        let allSelected = this.allSelected();
+
     return(
     <div className="homepage-container">
         <div className="homepage">
@@ -85,27 +130,19 @@ class Homepage extends React.Component {
                 </div>
             </div>
             <p className="factoid">Fans have paid artists $484 million using BandCabin, and $17.7 million in the last 30 days alone.</p>
-            <div className="album-display-filter">
-                    <div className="homepage-filters-all" onClick={this.updateSelected}>all</div>
-                    <div className="homepage-filters" onClick={this.updateSelected}>electronic</div>
-                    <div className="homepage-filters" onClick={this.updateSelected}>rock</div>
-                    <div className="homepage-filters" onClick={this.updateSelected}>metal</div>
-                    <div className="homepage-filters" onClick={this.updateSelected}>alternative</div>
-                    <div className="homepage-filters" onClick={this.updateSelected}>hip-hop/rap</div>
-                    <div className="homepage-filters" onClick={this.updateSelected}>experimental</div>
-                    <div className="homepage-filters" onClick={this.updateSelected}>punk</div>
-                    <div className="homepage-filters" onClick={this.updateSelected}>pop</div>
-                    <div className="homepage-filters" onClick={this.updateSelected}>jazz</div>
-                    <div className="homepage-filters" onClick={this.updateSelected}>acoustic</div>
-                    <div className="homepage-filters" onClick={this.updateSelected}>folk</div>
+            <div className={filterColor}>
+                    <div className={allSelected}onClick={this.updateSelected}>All</div>
+                    {genreButtons}
             </div>
+            {/* <div className="album-display-filter-2"></div> */}
+            {/* uncomment when ready for subgenres / new filters*/}
             <div className="homepage-wrapper">
                 {albumTitles}
             </div>
             <div className="homepage-album-navigation">
                 <div onClick={this.handlePrevious}>Previous</div>
                 <div className="next" onClick={this.handleNext}>Next</div>
-                </div>
+            </div>
         </div>
     </div>
     )
