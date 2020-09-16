@@ -101,8 +101,8 @@ class AlbumForm extends React.Component{
         let newGenre = this.state.genre + e.currentTarget.textContent + ","
      
         if(newTags.includes(e.currentTarget.textContent)){
-        }else{
-        newTags.push(e.currentTarget.textContent)
+        } else {
+            newTags.push(e.currentTarget.textContent)
         }
         this.setState({ tags: newTags, searchText: "", genre: newGenre})
     }

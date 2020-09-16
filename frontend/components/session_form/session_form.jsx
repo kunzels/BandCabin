@@ -8,10 +8,13 @@ class SessionForm extends React.Component {
             username: '',
             artist: '',
             email: '',
-            password: ''
+            password: '',
+            imageUrl: null,
+            imageFile: null,
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleDemoUser = this.handleDemoUser.bind(this)
+        this.handleDemoUser = this.handleDemoUser.bind(this);
+        this.handleFile = this.handleFile.bind(this);
     }
     
     update(field) {
@@ -19,11 +22,37 @@ class SessionForm extends React.Component {
             [field]: e.currentTarget.value
         });
     }
-    
+
+    handleFile(e) {
+        const reader = new FileReader();
+        const file = e.currentTarget.files[0];
+        reader.onloadend = () =>
+            this.setState({ imageUrl: reader.result, imageFile: file });
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            this.setState({ imageUrl: "", imageFile: null });
+        }
+    }
+
     handleSubmit(e) {
         e.preventDefault();
-        const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        if(this.props.formType === "Sign Up"){ 
+            const formData = new FormData();
+            formData.append('user[username]', this.state.username);
+            formData.append('user[artist]', this.state.artist);
+            formData.append('user[email]', this.state.email);
+            formData.append('user[password]', this.state.password);
+        if (this.state.imageFile) {
+            formData.append('user[photo]', this.state.imageFile);
+        }
+            this.props.processForm(formData)
+        } else {
+            e.preventDefault();
+            const user = Object.assign({}, this.state);
+            this.props.processForm(user);
+        }
     }
     
     handleDemoUser(e) {
@@ -53,16 +82,30 @@ class SessionForm extends React.Component {
             button = <div></div>
         }
 
+        let imagePreview;
+        if (this.state.imageUrl) {
+            imagePreview = <img src={this.state.imageUrl} className="user-square" alt="" />
+        }
+
         let form;
         if (this.props.formType === 'Sign Up') {
             form = <div className="login-page">
+                <div className="user-profile-picture">
+                    <div className="user-square">{imagePreview}</div>
+                    <div className="user-file-container">
+                        <div >
+                            <label for="files" className="custom-file-input"></label>
+                            <input type="file" id="files" accept=".jpg, .jpeg, .png" className="hidden" onChange={this.handleFile} />
+                        </div>
+                    </div>
+                </div>
                 <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
                     <br />
                         <div className="errors">
                             {this.renderErrors()}
                         </div>
-                        <div className="login-form">
+                        <div className="signup-form">
                             <br />
                             <label className="username-password">
                                 <br />
@@ -160,7 +203,7 @@ class SessionForm extends React.Component {
         }
 
         return (
-            <div>
+            <div className = "login-signup-main" >
                 {form}
             </div>
         )
