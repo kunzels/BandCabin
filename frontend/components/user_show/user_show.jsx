@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 class UserShow extends React.Component {
     constructor(props){
         super(props)
-        this.state = {user: ""}
+        this.state = {
+            user: ""
+        }
     }
     
     componentDidMount () {
