@@ -9,6 +9,9 @@ class SessionForm extends React.Component {
             artist: '',
             email: '',
             password: '',
+            location:'Earth, Solar System, Orion Spiral Arm, Milky Way Galaxy, Local Group, Virgo Supercluster, Universe',
+            description: 'A new band on Bandcabin',
+            genre: 'Sound of an audible type',
             imageUrl: null,
             imageFile: null,
         };
@@ -44,6 +47,9 @@ class SessionForm extends React.Component {
             formData.append('user[artist]', this.state.artist);
             formData.append('user[email]', this.state.email);
             formData.append('user[password]', this.state.password);
+            formData.append('user[location]', this.state.location);
+            formData.append('user[description]', this.state.description);
+            formData.append('user[genre]', this.state.genre);
         if (this.state.imageFile) {
             formData.append('user[photo]', this.state.imageFile);
         }
