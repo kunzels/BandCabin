@@ -94,3 +94,56 @@
     color: black;
     text-decoration: none;
 }
+
+.user-config-buttons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.user-edit-link{
+    border: 1px solid #939497;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 3px 9px;
+    color: #6c6c6d;
+    text-decoration: none;
+    margin-top: -1px;
+    margin-left: 10px;
+}
+
+.user-edit-link:hover{
+    cursor: pointer;
+}
+
+.user-bio-location-edit{
+    color:#828282;
+    font-size: small;
+    padding-bottom: 2px;
+    margin-top: 160px;
+    width: 200px;
+}
+
+.user-bio-genre-edit{
+     color:#828282;
+    font-size: small;
+    padding-bottom: 2px;
+    width: 200px;
+}
+
+.user-bio-description-edit{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    width: 800px;
+    word-wrap: break-word;
+    min-height: 200px;
+    resize: none;
+}
+
+.user-config-buttons-edit{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-left: 624px;
+}

@@ -23,3 +23,10 @@ export const fetchUsers = () => dispatch => (
     APIUtil.fetchUsers()
         .then(users => (dispatch(receiveUsers(users))))
 )
+
+export const updateUser = user => dispatch => {
+    return (
+        APIUtil.updateUser(user).then(user => dispatch(receiveUser(user)),
+            err => dispatch(receiveErrors(err.responseJSON)))
+    )
+};
