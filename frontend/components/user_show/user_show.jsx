@@ -76,34 +76,6 @@ class UserShow extends React.Component {
             submitButton = <div></div>
             cancelButton = <div></div>
         }
-
-        // if (typeof this.state.user.albums === "undefined"){
-        //     return (
-        //         <div>
-        //             <div className="user-bio">
-        //                 <div className="profile-picture-container">
-        //                     <img className="profile-picture" src={this.state.user.photoURL} alt="profile-picture" />
-        //                 </div>
-        //                 <div className="bio">
-        //                     <div className="user-bio-username">{this.state.user.username}</div>
-        //                     <br /><br />
-        //                     <div className="below-username">
-        //                         <br /><br />
-        //                         <div className="user-bio-location">Location: {this.state.location}</div>
-        //                         <div className="user-bio-genre">Genre: {this.state.genre}</div>
-        //                         <div className="user-bio-description">{this.state.description}</div>
-        //                         <div className="user-config-buttons">
-        //                             {button}
-        //                             {editButton}
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //         </div>
-
-        //     )
-        // }
-
         let albumTitles;
 
         if (typeof this.state.user.albums !== "undefined"){
