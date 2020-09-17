@@ -72,6 +72,7 @@
 
 .track{
     margin-top: 5px;
+    display: flex;
 }
 
 .playing-track{
@@ -97,6 +98,7 @@
 .play-button{
     width: 20px;
     height: 20px;
+    margin-top: 10px;
     // content: url("./play.png");
 }
 
