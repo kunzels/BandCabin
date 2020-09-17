@@ -66,6 +66,7 @@ class MusicPlayer extends React.Component {
 
     playTrack(e) {
         let player = document.getElementById('musicplayer');
+        player.volume = 0.1;
         let currentTrack = this.props.tracks[e.target.id];
         this.setState({currentTrack, playing: true, cursorPosition: 0}, () => {
         player.src = currentTrack.trackUrl;
