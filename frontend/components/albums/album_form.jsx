@@ -124,6 +124,7 @@ class AlbumForm extends React.Component{
         let addedTracks;
         if(this.state.track_attributes.length){
             addedTracks = this.state.track_attributes.map((track, idx) => {
+           
                 return(
                     <li key={idx}>{track.title}</li>
                 )
@@ -207,12 +208,6 @@ class AlbumForm extends React.Component{
                                 <input id="title" type="text" value={this.state.title} className="album-form-text-input" placeholder="Album Title" onChange={this.update('title')} />
                         </div>
                         <br />
-                            {/* <div className="album-input">
-                                <label htmlFor="genre"></label>
-                                <div className="form-error-g">{genreError}</div>
-                                <input id="genre" type="text" value={this.state.genre} className="album-form-text-input" placeholder="Genre" onChange={this.update('genre')} />
-                            </div>
-                        <br /> */}
                         <div className="album-input">
                             <label htmlFor="price"></label>
                                 <div className="form-error-p">{priceError}</div>
