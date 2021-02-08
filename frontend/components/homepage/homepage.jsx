@@ -20,7 +20,7 @@ class Homepage extends React.Component {
     }
 
     updateSelected(e){
-        let text = e.currentTarget.innerText
+        let text = e.currentTarget.innerText;
         this.setState({ selected: text.charAt(0).toUpperCase() + text.slice(1), first: 0, second:4})
     }
 
@@ -146,7 +146,7 @@ class Homepage extends React.Component {
                 {albumTitles}
             </div>
             <div className="homepage-album-navigation">
-                <div onClick={this.handlePrevious}>Previous</div>
+                <div className="previous" onClick={this.handlePrevious}>Previous</div>
                 <div className="next" value="test" onClick={this.handleNext}>Next</div>
             </div>
         </div>
